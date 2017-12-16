@@ -1,50 +1,33 @@
 <template>
   <div id="app">
-    <app-navbar></app-navbar>
-    <div class="app-body">
-      <app-carousel :items="items"></app-carousel>
-      <app-main-content></app-main-content>      
-    </div>
-    <router-view/>
+    <app-navbar></app-navbar>   
+    <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import MainContent from './components/MainContent'
-import AppCarousel from './components/AppCarousel'
+import Landing from './components/Landing'
 import Navbar from './components/Navbar'
 export default {
   name: 'app',
   components: {
-    appMainContent: MainContent,
-    AppCarousel,
+    appLanding: Landing,
     appNavbar: Navbar
   },
   data () {
     return {
-      items: [
-      {
-        src: '/static/images/aphromoo-news.jpg'
-      },
-      {
-        src: '/static/images/aphromoo-news.jpg'
-      },
-      {
-        src: '/static/images/aphromoo-news.jpg'
-      },
-      {
-        src: '/static/images/aphromoo-news.jpg'
-      }
-      ]
+    
     }
   }
 }
 </script>
 
 <style>
-.app-body {
-  width: 65%;
-  margin: auto;
+@font-face {
+  font-family: 'gilroy';
+  src: url('./assets/fonts/Gilroy-ExtraBold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
 body{
   background-color: #252525;
