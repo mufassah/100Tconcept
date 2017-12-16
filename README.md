@@ -1,6 +1,6 @@
 # 100t-concept
 
-> 100T Concept site
+> Concept site for 100 Thieves
 
 ## Build Setup
 

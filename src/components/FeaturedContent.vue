@@ -1,8 +1,10 @@
 <template>
 	<div class="featured-content">
 		<div class="content-card">
-			<h1 class="featured-header">Featured Video</h1>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBZBM2fyl60" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<h1 class="featured-header">100 Thieves Schedule</h1>
+			<div class="schedule-temp">
+					<img src="/static/images/uhhhSchedule.jpg" class="featured-merch">
+				</div>
 		</div>
 		<div class="content-card">
 			<h1 class="featured-header">Featured Merch</h1>
@@ -17,11 +19,18 @@
 			<p class="merch-text">See more items in the shop <a href="https://www.100thieves.com/store/" class="merch-link">Here</a></p>
 		</div>
 		<div class="content-card">
+			<h1 class="featured-header">Recent Tweets</h1>
+			<div class="twitter-container">
+				<a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
+			</div>
+		</div>
+		
+		<div class="content-card">
 			<h1 class="featured-header">Sign up for our Newsletter!</h1>
 			<p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
 			<form>
 				<div class="newsletter">      
-					<input type="text" required>
+					<input type="text" required :rules="emailRules">
 					<label>Email</label>
 				</div>
 			</form>
@@ -31,7 +40,7 @@
 </template>
 
 <script>
-import Twitter from 'twitter'
+//import Twitter from 'twitter'
 export default {
 	data() {
 		return {
@@ -41,28 +50,44 @@ export default {
 			(v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
 			]
 		}
-	},
-	created() {
-		//Callback functions
-		var client = new Twitter({
-    	consumerKey: "2sMaVnHgjD1eeifRqSJw57D9k",
-    	consumerSecret: "vUxxE7QCYlH1K9UaE3bnRiLv8dPEpKMEEwq9TSFDU7Cyv53Ht0",
-    	accessToken: "3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",
-    	accessTokenSecret: "y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s",
-    	callBackUrl: "None"
-	});
+	}
+// 	created() {
+// 		//Callback functions
+// 		var client = new Twitter({
+//     	consumerKey: "2sMaVnHgjD1eeifRqSJw57D9k",
+//     	consumerSecret: "vUxxE7QCYlH1K9UaE3bnRiLv8dPEpKMEEwq9TSFDU7Cyv53Ht0",
+//     	accessToken: "3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",
+//     	accessTokenSecret: "y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s",
+//     	callBackUrl: "None"
+// 	});
 
-client.get('favorites/list', function(error, tweets, response) {
-  if(error) throw error;
-  console.log(tweets);  // The favorites. 
-  console.log(response);  // Raw response object. 
-});
+// client.get('favorites/list', function(error, tweets, response) {
+//   if(error) throw error;
+//   console.log(tweets);  // The favorites. 
+//   console.log(response);  // Raw response object. 
+// });
 
-}
+// }
 }
 </script>
 
 <style>
+.schedule-temp {
+	display: flex;
+	justify-content: center;
+	height: 25em;
+}
+.schedule-temp > img {
+	height: 100%;
+}
+.twitter-container {
+	display: flex;
+	justify-content: center;
+}
+.twitter-container > iframe {
+	height: 20em;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
 .newsletter {
 	position: relative;
 }
