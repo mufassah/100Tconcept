@@ -7,7 +7,11 @@
 		  <a href="/#/">CONTENT</a>
 		</div>
 		<div class="nav-flex"> 
-			<a class="nav-logo" href="/#/"><img src="../assets/100Thieves_Logo_White_Red2.png">  </a>
+			<a class="nav-logo" href="/#/">
+				<img src="../assets/100t-logo-optimized.svg"
+						 width="200px"
+						 height="200px">
+			</a>
 		</div>
 		<div class="nav-flex2 nav-items borderYtoX">
 			<a href="https://www.100thieves.com/store/">STORE</a>
