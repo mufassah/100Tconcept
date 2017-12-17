@@ -6,9 +6,14 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import VueScript2 from 'vue-script2'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+
+Vue.component('icon', Icon)
 
 Vue.use(Vuetify)
 Vue.use(VueScript2)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

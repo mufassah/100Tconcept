@@ -1,25 +1,26 @@
 <template>
-	<nav class= "nav-full">
-		<div class="nav-flex2 nav-items borderYtoX">
-		  <a href="/#/">HOME</a>
-		  <a href="/#/">NEWS</a>
-		  <a href="/#/">TEAMS</a>
-		  <a href="/#/">CONTENT</a>
-		</div>
-		<div class="nav-flex"> 
-			<a class="nav-logo" href="/#/">
-				<img src="../assets/100t-logo-optimized.svg"
-						 width="200px"
-						 height="200px">
-			</a>
-		</div>
-		<div class="nav-flex2 nav-items borderYtoX">
-			<a href="https://www.100thieves.com/store/">STORE</a>
-			<a href="/#/">PARTNERS</a>
-			<a href="/#/">ABOUT US</a>
-			<a href="/#/">CONTACT</a>
-		</div>
-	</nav> 
+  <nav class= "nav-full">
+    <div class="nav-container">
+      <div class="nav-flex2 nav-items borderYtoX">
+      <a href="/#/">NEWS</a>
+      <a href="/#/">TEAMS</a>
+      <a href="/#/">CONTENT</a>
+    </div>
+    <div class="nav-flex"> 
+      <a class="nav-logo" href="/#/">
+        <img src="../assets/100t-logo-optimized.svg"
+             width="200px"
+             height="200px">
+      </a>
+    </div>
+    <div class="nav-flex2 nav-items borderYtoX">
+      <a href="/#/">PARTNERS</a>
+      <a href="https://www.100thieves.com/contact-1/">CONTACT</a>
+      <a href="https://www.100thieves.com/store/">STORE</a>
+    </div>
+    </div>
+    
+  </nav> 
 </template>
 
 <script>
@@ -27,8 +28,16 @@
 </script>
 
 <style>
+.nav-container {
+  width: 100%;
+  max-width: 88.3em;
+  margin: auto;
+  display:flex;
+  justify-content: center;
+  height: 7em;
+}
 .nav-items a {
-	color: #FFF;
+  color: #FFF;
     text-decoration: none;
     margin: 0px 10px;
     padding: 10px 10px;
@@ -37,80 +46,78 @@
     cursor: pointer;
 }
 .nav-full{
-	background: rgba(0,0,0,.6);
-	height:7em;
-	padding-top:.2em;
-	padding-bottom:.2em;
-	display:flex;
-	justify-content: center;
-	color: white;
-	margin-bottom: 3em;
+  background: #0f0f0f;
+  height: 7em;
+  padding-top:.2em;
+  padding-bottom:.2em;
+  color: white;
+  margin-bottom: 3em;
 }
 .nav-logo > img {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 a.nav-logo{
 
 }
 a.nav-logo:link {
-	/* Applies to all visited links */
-	text-decoration:  none;
-	/*  color: white;*/
+  /* Applies to all visited links */
+  text-decoration:  none;
+  /*  color: white;*/
 } 
 a.nav-logo:visited {
-	/* Applies to all visited links */
-	text-decoration:  none;
-	/*  color: white;*/
+  /* Applies to all visited links */
+  text-decoration:  none;
+  /*  color: white;*/
 } 
 a.nav-logo:hover{
-	text-decoration: none;
-	color: #ef3232;
+  text-decoration: none;
+  color: #ef3232;
 }
 a.nav-logo:active{
-	text-decoration: none;
-	color: #ef3232;
+  text-decoration: none;
+  color: #ef3232;
 }
 #header{
-	margin-top: 2em;
-	width: 15em;
+  margin-top: 2em;
+  width: 15em;
 }
 .logo-flex{
-	display:flex;
+  display:flex;
 }
 .nav-flex2{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: 1.2em;
-	width: 30em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+  width: 30em;
 }
 .nav-flex{
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 .nav-items{
-	margin-left: 1em;
-	margin-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 a.nav-link{
-	color: white;
+  color: white;
 }
 a.nav-link:link {
-	/* Applies to all visited links */
-	text-decoration:  none;
-	color: white;
+  /* Applies to all visited links */
+  text-decoration:  none;
+  color: white;
 } 
 a.nav-link:visited {
-	/* Applies to all visited links */
-	text-decoration:  none;
-	color: white;
+  /* Applies to all visited links */
+  text-decoration:  none;
+  color: white;
 } 
 a.nav-link:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 a.nav-link:active{
-	text-decoration: none;
-	color: #ef3232;
+  text-decoration: none;
+  color: #ef3232;
 }
 
 
@@ -128,11 +135,11 @@ div.borderYtoX a:before, div.borderYtoX a:after
     transition: all 0.3s;
 }
 /*.active-link {
-	box-shadow: 0 2px 5px #FFFFFF, 0 2px 1px #FFFFFF, 0 3px 1px -2px #FFFFFF;
+  box-shadow: 0 2px 5px #FFFFFF, 0 2px 1px #FFFFFF, 0 3px 1px -2px #FFFFFF;
 }*/
 /*
 div.borderYtoX a.active-link:before, div.borderYtoX a.active-link:after {
-	position: absolute;
+  position: absolute;
     opacity: 0.5;
     height: 100%;
     width: 2px;

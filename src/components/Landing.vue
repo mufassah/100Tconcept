@@ -1,8 +1,7 @@
 <template>
   <div class="app-body">
-      <app-carousel :items="items"></app-carousel>
-      <app-main-content></app-main-content>      
-    </div>
+    <app-carousel :items="items"></app-carousel>
+    <app-main-content></app-main-content>      
   </div>
 </template>
 
@@ -38,7 +37,8 @@ export default {
 
 <style>
 .app-body {
-  width: 65%;
+  width: 100%;
+  max-width: 88.3em;
   margin: auto;
 }
 
