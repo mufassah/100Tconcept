@@ -24,8 +24,7 @@
 				<a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
 			</div>
 		</div>
-		
-		<div class="content-card">
+		<div class="content-card" v-if="true === true">
 			<h1 class="featured-header">Sign up for our Newsletter!</h1>
 			<p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
 			<form>
@@ -36,7 +35,6 @@
 			</form>
 		</div>
 	</div>
-</div>
 </template>
 
 <script>
@@ -72,6 +70,7 @@ export default {
 </script>
 
 <style>
+
 .schedule-temp {
 	display: flex;
 	justify-content: center;
