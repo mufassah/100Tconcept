@@ -5,9 +5,9 @@
 			<iframe width="560" height="347" src="https://www.youtube.com/embed/ZBZBM2fyl60" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		</div>
 		
-		<div class="news-card" v-for="(story, i) in stories">
-			<div class="featured-story" v-if="i === 0">
-				<div class="recent-news">
+		<div class="news-card" v-for="(story, i) in stories" :key="story">
+			<div class="content-card" v-if="i === 0">
+				
 					<h1 class="featured-header">
 						Recent News
 					</h1>
@@ -20,7 +20,7 @@
 					<p>{{story.body}}</p>
 				</div>
 				</div>
-				</div>
+				
 				
 			</div>
 			<div class="news-block" v-else>
@@ -99,6 +99,7 @@ export default {
 	margin-bottom: 1em;
 	border-left: 4px solid;
  	padding-left: .5em;
+	height: 18em;
   border-color: #ef3232;
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
@@ -106,13 +107,14 @@ export default {
 	flex: 1;
 	padding: 1em;
 }
+.story-avatar img {
+	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
 .story-body {
 	flex: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 1em;
-	color: #e0e0e0;
-
 }
 </style>
