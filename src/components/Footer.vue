@@ -59,7 +59,7 @@
 <style>
 *{padding: 0; margin: 0;}
 .footer-links {
-    color: #FFF;
+    color: #e0e0e0;
     text-decoration: none;
     margin-right: 1em;
     padding: 1em 0em;
@@ -79,7 +79,6 @@
   max-width: 88.3em;
 }
 .info-row {
-  color: #e0e0e0;
   padding: 1em;
   width: 100%;
   display: flex;
@@ -88,7 +87,6 @@
   flex: 1;
 }
 .logo-copyright {
-  color: #e0e0e0;
   padding: 1em;
   width: 100%;
   display: flex;

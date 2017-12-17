@@ -1,54 +1,92 @@
 <template>
-	<div class="featured-content">
-		<div class="content-card">
-			<h1 class="featured-header">100 Thieves Schedule</h1>
-			<div class="schedule-temp">
-					<img src="/static/images/uhhhSchedule.jpg" class="featured-merch">
-				</div>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Featured Merch</h1>
-			<div class="merch-images">
-				<div class="merch-item">
-					<img src="/static/images/hoodie.jpg" class="featured-merch">
-				</div>
-				<div class="merch-item">
-					<img src="/static/images/tshirt.jpg" class="featured-merch">
-				</div>
-			</div>
-			<p class="merch-text">See more items in the shop <a href="https://www.100thieves.com/store/" class="merch-link">Here</a></p>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Recent Tweets</h1>
-			<div class="twitter-container">
-				<a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
-			</div>
-		</div>
-		<div class="content-card" v-if="true === true">
-			<h1 class="featured-header">Sign up for our Newsletter!</h1>
-			<p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
-			<form>
-				<div class="newsletter">      
-					<input type="text" required :rules="emailRules">
-					<label>Email</label>
-				</div>
-			</form>
-		</div>
-	</div>
+    <div class="featured-content">
+        <div class="content-card">
+            <h1 class="featured-header">100 Thieves Schedule</h1>
+            <v-tabs fixed centered>
+                <v-tabs-bar class="my-bar">
+                      <v-tabs-slider class="my-slider"></v-tabs-slider>
+                      <v-tabs-item
+                            v-for="i in items"
+                        :key="i.game"
+                        :href="'#tab-' + i.game"
+                      >
+                    {{ i.game }}
+                      </v-tabs-item>
+                </v-tabs-bar>
+                <v-tabs-items>
+                    <v-tabs-content
+                        v-for="i in items"
+                        :key="i.game"
+                        :id="'tab-' + i.game"
+                    >
+                        <v-card flat>
+                              <v-card-text
+                              v-for="(event, index) in i.events"
+                              :key="event"
+                              >
+                              <div class="schedule-row">
+                              <p>{{dates[index]}}</p>
+                              <p>{{ event }}</p>
+                              </div>
+                            </v-card-text>
+                        </v-card>
+                      </v-tabs-content>
+                </v-tabs-items>
+              </v-tabs>
+        </div>
+        <div class="content-card">
+            <h1 class="featured-header">Featured Merch</h1>
+            <div class="merch-images">
+                <div class="merch-item">
+                    <img src="/static/images/hoodie.jpg" class="featured-merch">
+                </div>
+                <div class="merch-item">
+                    <img src="/static/images/tshirt.jpg" class="featured-merch">
+                </div>
+            </div>
+            <p class="merch-text">See more items in the shop <a href="https://www.100thieves.com/store/" class="merch-link">Here</a></p>
+        </div>
+        <div class="twitter-card">
+            <h1 class="featured-header">Recent Tweets</h1>
+            <div class="twitter-container">
+                <a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
+            </div>
+        </div>
+        <div class="newsletter-card">
+            <h1 class="featured-header">Sign up for our Newsletter!</h1>
+            <p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
+            <form>
+                <div class="newsletter">      
+                    <input type="text" required :rules="emailRules">
+                    <label>Email</label>
+                </div>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script>
 //import Twitter from 'twitter'
 export default {
-	data() {
-		return {
-			email: '',
-			emailRules: [
-			(v) => !!v || 'E-mail is required',
-			(v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-			]
-		}
-	}
+    data() {
+        return {
+            email: '',
+            emailRules: [
+            (v) => !!v || 'E-mail is required',
+            (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+            ],
+            dates: ['December 17', 'December 18', 'December 19', 'December 20', 'December 21', 'December 22', 'December 23'],
+            items: [{
+                    game: 'League of Legends',
+                    events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
+                }, 
+                {
+                    game: 'CS:GO',
+                    events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
+                }
+        ]
+        }
+    }
 // 	created() {
 // 		//Callback functions
 // 		var client = new Twitter({
@@ -70,100 +108,140 @@ export default {
 </script>
 
 <style>
-
+.tabs {
+  box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
+.tabs__items {
+  background-color:#2d2b2b;
+}
+.card {
+    padding: 1em;
+}
+.card__text {
+    padding: .3em !important;
+    
+}
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 .5em;
+}
+.my-bar {
+    background-color: #0f0f0f;
+}
+.my-slider {
+    background-color: #ef3232 !important;
+    border-color: #ef3232 !important;
+}
 .schedule-temp {
-	display: flex;
-	justify-content: center;
-	height: 25em;
+    display: flex;
+    justify-content: center;
+    height: 25em;
 }
 .schedule-temp > img {
-	height: 100%;
+    height: 100%;
 }
 .twitter-container {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .twitter-container > iframe {
-	height: 20em;
-	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+    height: 20em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 .newsletter {
-	position: relative;
+    position: relative;
 }
 .newsletter-para {
-	color: #e0e0e0;
-	margin-top: -.5em;
-	margin-bottom: 2em;
-	padding-left: 1em;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    padding-left: 1em;
+    font-size: 1.2em;
 }
 form {
-	padding-left: 1em;
-	padding-right:3em;
+    padding-left: 1em;
+    padding-right:3em;
 }
 label{
-	display: block;
-	position: absolute;
-	pointer-events: none;
-	top: -5px;
-	left: 0px;
-	color: #e0e0e0;
-	font-size: 16px;
-	z-index: 1;
-	transition: all .3s ease-out;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    top: -5px;
+    left: 0px;
+    font-size: 1.2em;
+    z-index: 1;
+    transition: all .3s ease-out;
 }
 input {
-	display: block;
-	background: none;
-	border: none;
-	border-bottom: 1px solid #ef3232;
-	width: 100%;
-	font-weight: normal;
-	font-size: 16px;
-	z-index: 2;
-	color: #e0e0e0;
-	caret-color: #e0e0e0;
+    display: block;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ef3232;
+    width: 100%;
+    font-weight: normal;
+    font-size: 16px;
+    z-index: 2;
+    caret-color: #e0e0e0;
 }
 input:focus	{
-	outline:none;
+    outline:none;
 }
 input:focus ~ label, input:valid ~ label {
-	top:-20px;
-	font-size:14px;
-	color: #ef3232;
+    top:-20px;
+    font-size:.9em;
+    color: #ef3232;
 }
 .featured-content {
-	flex: 1;
+    flex: 1;
 }	
 .content-card {
-	background-color: #1d1d1d;
-	padding: 2em;
-	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-	margin-bottom: 1em;
+    background-color: #1d1d1d;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+    margin-bottom: 1em;
+    height: 33em;
+}
+.content-card iframe {
+  box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
+.twitter-card {
+    background-color: #1d1d1d;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+    margin-bottom: 1em;
+    height: 56em;
+}
+.newsletter-card {
+    background-color: #1d1d1d;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+    margin-bottom: 1em;
+    height: 18em;
 }
 .featured-header {
-	border-left: 4px solid;
-	padding-left: .5em;
-	border-color: #ef3232;
-	margin-bottom: 1em;
-	color: #e0e0e0;
+    border-left: 4px solid;
+    padding-left: .5em;
+    border-color: #ef3232;
+    margin-bottom: 1em;
 }
 .featured-merch {
-	height: 18em;
+    height: 18em;
 }
 .merch-images {
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
 }
-.merch-item {
-	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+.merch-item img {
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 .merch-text {
-	color: #e0e0e0;
-	font-size: 16px;
-	padding-left: 1em;
+    font-size: 1.2em;
+    padding-left: 1em;
 }
 .merch-link {
-	color: #ef3232;
+    color: #ef3232;
 }
 </style>
