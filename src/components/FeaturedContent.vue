@@ -1,7 +1,7 @@
 <template>
     <div class="featured-content">
         <div class="content-card">
-            <h1 class="featured-header">100 Thieves Schedule</h1>
+            <h1 class="schedule">100 Thieves Schedule</h1>
             <v-tabs fixed centered>
                 <v-tabs-bar class="my-bar">
                       <v-tabs-slider class="my-slider"></v-tabs-slider>
@@ -108,6 +108,14 @@ export default {
 </script>
 
 <style>
+
+.featured-content .content-card h1.schedule {
+	border-left: 4px solid;
+  padding-left: .5em;
+  border-color: #ef3232;
+  margin-bottom: 1em;
+}
+
 .tabs {
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
@@ -127,6 +135,7 @@ export default {
     align-items: center;
     border-bottom: 1px solid #e0e0e0;
     padding: 0 .5em;
+    height: 2.17em;
 }
 .my-bar {
     background-color: #0f0f0f;

@@ -23,22 +23,31 @@
         <p>Connect with us:</p>
         </div>
         <div class="sm-links">
-          <a href="#" class="icon-link">
-          <div><icon name="twitter" class="scaled sm-icon"></icon>
+        <a target="_blank"
+           href="https://twitter.com/100Thieves" 
+           class="icon-link">
+          <div>
+            <icon name="twitter" class="scaled sm-icon"></icon>
           </div>
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.facebook.com/100Thieves/" 
+           class="icon-link">
           <div>
             <icon name="facebook" class="scaled sm-icon"></icon>
           </div>
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.instagram.com/100thieves/" 
+           class="icon-link">
           <div>
             <icon name="instagram" class="scaled sm-icon"></icon>
           </div>
             
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.youtube.com/channel/UCnrX2_FoKieobtw19PiphDw" 
+           class="icon-link">
           <div>
             <icon name="youtube" class="scaled sm-icon"></icon>
           </div>
@@ -69,7 +78,7 @@
     font-size: 1.1em;
 }
 .footer-links:hover {
-  color: #ef3232
+  color: #ef3232;
 }
 .footer-container {
   margin: auto;
