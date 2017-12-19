@@ -137,22 +137,22 @@ footer {
 
 .youtube:hover {
   color: #FF0000;
-  transition: color .5s;
+  transition: color .4s;
 }
 
 .instagram:hover {
   color: #fb3958;
-  transition: color .5s;
+  transition: color .4s;
 }
 
 .facebook:hover {
   color: #3b5998;
-  transition: color .5s;
+  transition: color .4s;
 }
 
 .twitter:hover {
   color: #00aced;
-  transition: color .5s;
+  transition: color .4s;
 }
 
 .sm-icon {
@@ -160,6 +160,6 @@ footer {
   top: 5px;
   /* width: 50px; */
   color: #e0e0e0;
-  transition: color .5s;
+  transition: color .4s;
 }
 </style>
