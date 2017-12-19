@@ -66,7 +66,7 @@
 </template>
 
 <script>
-//import Twitter from 'twitter'
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -86,24 +86,13 @@ export default {
                 }
         ]
         }
+    },
+	async created() {
+		console.log('calling Twitter...')
+            let config = {'Authorization': 'OAuth oauth_consumer_key="2sMaVnHgjD1eeifRqSJw57D9k",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513548714",oauth_nonce="dvkqcD4gQgi",oauth_version="1.0",oauth_signature="LUD9%2FcO5ZSz9FJ5kzOLdVs4KRlY%3D"'}
+            const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=5', config)
+            console.log(response)
     }
-// 	created() {
-// 		//Callback functions
-// 		var client = new Twitter({
-//     	consumerKey: "2sMaVnHgjD1eeifRqSJw57D9k",
-//     	consumerSecret: "vUxxE7QCYlH1K9UaE3bnRiLv8dPEpKMEEwq9TSFDU7Cyv53Ht0",
-//     	accessToken: "3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",
-//     	accessTokenSecret: "y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s",
-//     	callBackUrl: "None"
-// 	});
-
-// client.get('favorites/list', function(error, tweets, response) {
-//   if(error) throw error;
-//   console.log(tweets);  // The favorites. 
-//   console.log(response);  // Raw response object. 
-// });
-
-// }
 }
 </script>
 
