@@ -20,27 +20,36 @@
       
       <div class="social-media">
         <div class="sm-header">
-        <p>Connect with us:</p>
+          <p>Connect with us:</p>
         </div>
         <div class="sm-links">
-          <a href="#" class="icon-link">
-          <div><icon name="twitter" class="scaled sm-icon"></icon>
+        <a target="_blank"
+           href="https://twitter.com/100Thieves" 
+           class="icon-link">
+          <div>
+            <icon name="twitter" class="twitter sm-icon scaled"></icon>
           </div>
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.facebook.com/100Thieves/" 
+           class="icon-link">
           <div>
-            <icon name="facebook" class="scaled sm-icon"></icon>
+            <icon name="facebook" class="facebook sm-icon scaled"></icon>
           </div>
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.instagram.com/100thieves/" 
+           class="icon-link">
           <div>
-            <icon name="instagram" class="scaled sm-icon"></icon>
+            <icon name="instagram" class="instagram sm-icon scaled"></icon>
           </div>
             
         </a>
-        <a href="#" class="icon-link">
+        <a target="_blank"
+           href="https://www.youtube.com/channel/UCnrX2_FoKieobtw19PiphDw" 
+           class="icon-link">
           <div>
-            <icon name="youtube" class="scaled sm-icon"></icon>
+            <icon name="youtube" class="youtube sm-icon scaled"></icon>
           </div>
             
         </a>
@@ -69,7 +78,7 @@
     font-size: 1.1em;
 }
 .footer-links:hover {
-  color: #ef3232
+  color: #ef3232;
 }
 .footer-container {
   margin: auto;
@@ -125,15 +134,32 @@ footer {
 .scaled {
   transform: scale(2);
 }
-.sm-icon:hover {
-  color: #ef3232;
-  transition: color .5s;
+
+.youtube:hover {
+  color: #FF0000;
+  transition: color .4s;
 }
+
+.instagram:hover {
+  color: #fb3958;
+  transition: color .4s;
+}
+
+.facebook:hover {
+  color: #3b5998;
+  transition: color .4s;
+}
+
+.twitter:hover {
+  color: #00aced;
+  transition: color .4s;
+}
+
 .sm-icon {
   position: relative;
   top: 5px;
   /* width: 50px; */
   color: #e0e0e0;
-  transition: color .5s;
+  transition: color .4s;
 }
 </style>
