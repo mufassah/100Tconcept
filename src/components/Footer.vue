@@ -20,28 +20,28 @@
       
       <div class="social-media">
         <div class="sm-header">
-        <p>Connect with us:</p>
+          <p>Connect with us:</p>
         </div>
         <div class="sm-links">
         <a target="_blank"
            href="https://twitter.com/100Thieves" 
            class="icon-link">
           <div>
-            <icon name="twitter" class="scaled sm-icon"></icon>
+            <icon name="twitter" class="twitter sm-icon scaled"></icon>
           </div>
         </a>
         <a target="_blank"
            href="https://www.facebook.com/100Thieves/" 
            class="icon-link">
           <div>
-            <icon name="facebook" class="scaled sm-icon"></icon>
+            <icon name="facebook" class="facebook sm-icon scaled"></icon>
           </div>
         </a>
         <a target="_blank"
            href="https://www.instagram.com/100thieves/" 
            class="icon-link">
           <div>
-            <icon name="instagram" class="scaled sm-icon"></icon>
+            <icon name="instagram" class="instagram sm-icon scaled"></icon>
           </div>
             
         </a>
@@ -49,7 +49,7 @@
            href="https://www.youtube.com/channel/UCnrX2_FoKieobtw19PiphDw" 
            class="icon-link">
           <div>
-            <icon name="youtube" class="scaled sm-icon"></icon>
+            <icon name="youtube" class="youtube sm-icon scaled"></icon>
           </div>
             
         </a>
@@ -134,10 +134,27 @@ footer {
 .scaled {
   transform: scale(2);
 }
-.sm-icon:hover {
-  color: #ef3232;
+
+.youtube:hover {
+  color: #FF0000;
   transition: color .5s;
 }
+
+.instagram:hover {
+  color: #fb3958;
+  transition: color .5s;
+}
+
+.facebook:hover {
+  color: #3b5998;
+  transition: color .5s;
+}
+
+.twitter:hover {
+  color: #00aced;
+  transition: color .5s;
+}
+
 .sm-icon {
   position: relative;
   top: 5px;

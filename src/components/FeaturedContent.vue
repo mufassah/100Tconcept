@@ -35,7 +35,7 @@
               </v-tabs>
         </div>
         <div class="content-card">
-            <h1 class="featured-header">Featured Merch</h1>
+            <h1 class="featured-header">Merchandise</h1>
             <div class="merch-images">
                 <div class="merch-item">
                     <img src="/static/images/hoodie.jpg" class="featured-merch">
@@ -118,6 +118,7 @@ export default {
 
 .tabs {
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+  height: 24.5em;
 }
 .tabs__items {
   background-color:#2d2b2b;
@@ -214,6 +215,7 @@ input:focus ~ label, input:valid ~ label {
 }
 .content-card iframe {
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+  height: 24.5em;
 }
 .twitter-card {
     background-color: #1d1d1d;

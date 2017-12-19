@@ -9,7 +9,7 @@
 			<div class="content-card" v-if="i === 0">
 				
 					<h1 class="featured-header">
-						Recent News
+						News
 					</h1>
 				<div class="first-story">
 				<div class="story-avatar">

@@ -14,9 +14,9 @@
       </a>
     </div>
     <div class="nav-flex2 nav-items borderYtoX">
+    	<a href="https://www.100thieves.com/store/">STORE</a>
       <a href="/#/">PARTNERS</a>
       <a href="https://www.100thieves.com/contact-1/">CONTACT</a>
-      <a href="https://www.100thieves.com/store/">STORE</a>
     </div>
     </div>
     
