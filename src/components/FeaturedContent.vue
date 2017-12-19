@@ -169,7 +169,7 @@ input {
     display: block;
     background: none;
     border: none;
-    border-bottom: 1px solid #ef3232;
+    border-bottom: 1px solid #ef3232 !important;
     width: 100%;
     font-weight: normal;
     font-size: 16px;
