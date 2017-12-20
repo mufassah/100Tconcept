@@ -2,20 +2,20 @@
   <nav class= "nav-full">
     <div class="nav-container">
       <div class="nav-flex2 nav-items borderYtoX">
-      <a href="/#/news">NEWS</a>
-      <a href="/#/teams">TEAMS</a>
-      <a href="/#/content">CONTENT</a>
+      <router-link to="/news">NEWS</router-link>
+      <router-link to="/teams">TEAMS</router-link>
+      <router-link to="/content">CONTENT</router-link>
     </div>
     <div class="nav-flex"> 
-      <a class="nav-logo" href="/#/">
+      <router-link to="/" class="nav-logo">
         <img src="../assets/100t-logo-optimized.svg"
              width="200px"
              height="200px">
-      </a>
+      </router-link>
     </div>
     <div class="nav-flex2 nav-items borderYtoX">
     	<a href="https://www.100thieves.com/store/">STORE</a>
-      <a href="/#/partners">PARTNERS</a>
+      <router-link to="/partners" >PARTNERS</router-link>
       <a href="https://www.100thieves.com/contact-1/">CONTACT</a>
     </div>
     </div>
