@@ -52,15 +52,15 @@
   padding-bottom:.2em;
   color: #e0e0e0;
   margin-bottom: 3em;
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 999; */
 }
 .nav-logo > img {
-  margin-top: 2em;
+    height: 90%;
 }
 a.nav-logo{
-
+  height: 6em;
 }
 a.nav-logo:link {
   /* Applies to all visited links */
