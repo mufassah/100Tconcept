@@ -3,8 +3,8 @@
     <div class="nav-container">
       <div class="nav-flex2 nav-items borderYtoX">
       <a href="/#/news">NEWS</a>
-      <a href="/">TEAMS</a>
-      <a href="/">CONTENT</a>
+      <a href="/#/teams">TEAMS</a>
+      <a href="/#/content">CONTENT</a>
     </div>
     <div class="nav-flex"> 
       <a class="nav-logo" href="/#/">
@@ -15,7 +15,7 @@
     </div>
     <div class="nav-flex2 nav-items borderYtoX">
     	<a href="https://www.100thieves.com/store/">STORE</a>
-      <a href="/">PARTNERS</a>
+      <a href="/#/partners">PARTNERS</a>
       <a href="https://www.100thieves.com/contact-1/">CONTACT</a>
     </div>
     </div>
