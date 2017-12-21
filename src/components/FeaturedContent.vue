@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import Twitter from 'twitter'
 export default {
     data() {
         return {
@@ -95,8 +95,11 @@ export default {
     },
 	async created() {
 		console.log('calling Twitter...')
-            let config = {'Authorization': 'OAuth oauth_consumer_key="2sMaVnHgjD1eeifRqSJw57D9k",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513548714",oauth_nonce="dvkqcD4gQgi",oauth_version="1.0",oauth_signature="LUD9%2FcO5ZSz9FJ5kzOLdVs4KRlY%3D"'}
-            const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=5', config)
+            var client = new Twitter({
+                consumer_key: '2sMaVnHgjD1eeifRqSJw57D9k',
+                consumer_secret: 'vUxxE7QCYlH1K9UaE3bnRiLv8dPEpKMEEwq9TSFDU7Cyv53Ht0',
+                bearer_token: '"AAAAAAAAAAAAAAAAAAAAAJWu3gAAAAAARxdW5nqaAH7xwXI3nXjno1y0eTY%3Dnf8IqWsiegiw465OPQcwNfkQDzZUuYptLawh2jm8AHcGECzpFA'
+            });
             console.log(response)
     }
 }
