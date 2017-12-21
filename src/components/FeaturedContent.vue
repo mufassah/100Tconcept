@@ -44,7 +44,10 @@
                     <img src="/static/images/tshirt.jpg" class="featured-merch">
                 </div>
             </div>
-            <p class="merch-text">See more items in the shop <a href="https://www.100thieves.com/store/" class="merch-link">Here</a></p>
+            <div class="merch-ad">
+            <h2>Purchase these and many more in the Store!</h2>
+            <a href="https://www.100thieves.com/store/" class="story-button">Browse</a>
+            </div>
         </div>
         <div class="twitter-card">
             <h1 class="featured-header">Recent Tweets</h1>
@@ -56,9 +59,12 @@
             <h1 class="featured-header">Sign up for our Newsletter!</h1>
             <p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
             <form>
+                <div class="form-container">
                 <div class="newsletter">      
                     <input type="text" required :rules="emailRules">
                     <label>Email</label>
+                </div>
+                <a href="/#/news" class="story-button">Sign Up</a>
                 </div>
             </form>
         </div>
@@ -123,8 +129,8 @@ export default {
     background-color: #0f0f0f;
 }
 .my-slider {
-    background-color: #ef3232 !important;
-    border-color: #ef3232 !important;
+    background-color: #a1131b !important;
+    border-color: #a1131b !important;
 }
 .schedule-temp {
     display: flex;
@@ -144,6 +150,8 @@ export default {
 }
 .newsletter {
     position: relative;
+    width: 23em;
+    display: flex;
 }
 .newsletter-para {
     margin-top: 2.5em;
@@ -159,7 +167,7 @@ label{
     display: block;
     position: absolute;
     pointer-events: none;
-    top: -5px;
+    top: 10px;
     left: 0px;
     font-size: 1.2em;
     z-index: 1;
@@ -169,7 +177,7 @@ input {
     display: block;
     background: none;
     border: none;
-    border-bottom: 1px solid #ef3232 !important;
+    border-bottom: 1px solid #a1131b !important;
     width: 100%;
     font-weight: normal;
     font-size: 16px;
@@ -180,9 +188,9 @@ input:focus	{
     outline:none;
 }
 input:focus ~ label, input:valid ~ label {
-    top:-20px;
+    top:-10px;
     font-size:.9em;
-    color: #ef3232;
+    color: #a1131b;
 }
 .featured-content {
     flex: 1;
@@ -215,7 +223,7 @@ input:focus ~ label, input:valid ~ label {
 .featured-header {
     border-left: 4px solid;
     padding-left: .5em;
-    border-color: #ef3232;
+    border-color: #a1131b;
     margin-bottom: 1em;
 }
 .featured-merch {
@@ -229,11 +237,41 @@ input:focus ~ label, input:valid ~ label {
 .merch-item img {
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
-.merch-text {
-    font-size: 1.2em;
-    padding-left: 1em;
+.merch-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 6em;
 }
-.merch-link {
-    color: #ef3232;
+.form-container {
+    display: flex;
+    justify-content: space-between;
 }
+/* .merch-button{
+    height: 2.5em;
+    background: #ef3232;
+    width: 8em;
+	text-align: center;
+    
+    border-radius: 3px;
+    line-height: 2.5em;
+    color: #e0e0e0;
+    cursor: pointer;
+    animation: pulse 3s ease-in-out infinite;
+}
+.merch-button:link {
+  text-decoration:  none;
+} 
+.merch-button:visited {
+  text-decoration:  none;
+} 
+@keyframes pulse{
+  0%, 70% {
+    box-shadow: 0px 0px 0px 0px rgba(224,224,224,.5)
+  }
+  100%{
+    box-shadow: 0 0px 0px 10px rgba(224,224,224,0)
+  }
+} */
 </style>
