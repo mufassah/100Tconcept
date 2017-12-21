@@ -91,6 +91,7 @@ export default {
 	display: flex;
 	height: 25em;
     background-size: cover;
+	box-shadow: 0 2px 6px 2px rgba(0,0,0,.2), 0 1px 4px 2px rgba(0,0,0,.14), 0 2px 1px 2px rgba(0,0,0,.12);
 }
 .featured-news {
 	display: flex;
