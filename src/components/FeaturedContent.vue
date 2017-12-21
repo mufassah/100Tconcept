@@ -46,7 +46,7 @@
             </div>
             <div class="merch-ad">
             <h2>Purchase these and many more in the Store!</h2>
-            <a href="https://www.100thieves.com/store/" class="merch-button">Browse</a>
+            <a href="https://www.100thieves.com/store/" class="story-button">Browse</a>
             </div>
         </div>
         <div class="twitter-card">
@@ -64,7 +64,7 @@
                     <input type="text" required :rules="emailRules">
                     <label>Email</label>
                 </div>
-                <a href="/#/news" class="merch-button">Sign Up</a>
+                <a href="/#/news" class="story-button">Sign Up</a>
                 </div>
             </form>
         </div>
@@ -129,8 +129,8 @@ export default {
     background-color: #0f0f0f;
 }
 .my-slider {
-    background-color: #ef3232 !important;
-    border-color: #ef3232 !important;
+    background-color: #a1131b !important;
+    border-color: #a1131b !important;
 }
 .schedule-temp {
     display: flex;
@@ -177,7 +177,7 @@ input {
     display: block;
     background: none;
     border: none;
-    border-bottom: 1px solid #ef3232 !important;
+    border-bottom: 1px solid #a1131b !important;
     width: 100%;
     font-weight: normal;
     font-size: 16px;
@@ -190,7 +190,7 @@ input:focus	{
 input:focus ~ label, input:valid ~ label {
     top:-10px;
     font-size:.9em;
-    color: #ef3232;
+    color: #a1131b;
 }
 .featured-content {
     flex: 1;
@@ -223,7 +223,7 @@ input:focus ~ label, input:valid ~ label {
 .featured-header {
     border-left: 4px solid;
     padding-left: .5em;
-    border-color: #ef3232;
+    border-color: #a1131b;
     margin-bottom: 1em;
 }
 .featured-merch {
@@ -248,7 +248,7 @@ input:focus ~ label, input:valid ~ label {
     display: flex;
     justify-content: space-between;
 }
-.merch-button{
+/* .merch-button{
     height: 2.5em;
     background: #ef3232;
     width: 8em;
@@ -273,5 +273,5 @@ input:focus ~ label, input:valid ~ label {
   100%{
     box-shadow: 0 0px 0px 10px rgba(224,224,224,0)
   }
-}
+} */
 </style>

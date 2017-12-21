@@ -107,7 +107,7 @@ export default {
 	border-left: 4px solid;
  	padding-left: .5em;
 	height: 18em;
-  border-color: #ef3232;
+  border-color: #a1131b;
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 .story-avatar {
@@ -142,10 +142,11 @@ export default {
 }
 .story-button {
     height: 2.5em;
-    background: #ef3232;
+    background: #a1131b;
     width: 8em;
 	text-align: center;
-    
+    font-weight: bold !important;
+    font-size: 1.1em;
     border-radius: 3px;
     line-height: 2.5em;
     color: #e0e0e0;
@@ -154,7 +155,7 @@ export default {
     transition: all ease-in-out 200ms;
 }
 .story-button:hover{
-	box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42);
+	/* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
 	text-decoration: none;
 }
 

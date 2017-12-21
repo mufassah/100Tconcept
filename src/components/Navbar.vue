@@ -74,11 +74,11 @@ a.nav-logo:visited {
 } 
 a.nav-logo:hover{
   text-decoration: none;
-  color: #ef3232;
+  color: #a1131b;
 }
 a.nav-logo:active{
   text-decoration: none;
-  color: #ef3232;
+  color: #a1131b;
 }
 #header{
   margin-top: 2em;
@@ -120,7 +120,7 @@ a.nav-link:hover{
 }
 a.nav-link:active{
   text-decoration: none;
-  color: #ef3232;
+  color: #a1131b;
 }
 
 
