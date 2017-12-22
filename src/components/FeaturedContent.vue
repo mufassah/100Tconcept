@@ -74,6 +74,9 @@
 <script>
 import axios from 'axios'
 import Twitter from 'twitter'
+
+var OAuth2 = require('OAuth').OAuth2
+var https = require('https')
 export default {
     data() {
         return {
@@ -96,36 +99,76 @@ export default {
     },
 	async created() {
         console.log('calling Twitter...')
+
+        // var oauth2 = new OAuth2('uyR81RFWn2zVjf1mKyg5AhQGC', 'BscbPybQIEhgUC9GFFWe0nHpgRxHD11TUk7qcLNDhfA4TtfWzz',
+        //     'https://api.twitter.com/', null, 'oauth2/token', null);
+        // oauth2.getOAuthAccessToken('', {
+        //     'grant_type': 'client_credentials'
+        // }, function (e, access_token) {
+        //     console.log(access_token); //string that we can use to authenticate request
+
+        //     var options = {
+        //         hostname: 'api.twitter.com',
+        //         path: '/1.1/statuses/user_timeline.json?screen_name=100thieves&count=1',
+        //         headers: {
+        //             Authorization: 'Bearer ' + access_token
+        //         }
+        //     }
+
+
+        //     https.get(options, function (result) {
+        //         var buffer = '';
+        //         result.setEncoding('utf8');
+        //         result.on('data', function (data) {
+        //             buffer += data;
+        //         })
+        //         result.on('end', function () {
+        //             var tweets = JSON.parse(buffer);
+        //             console.log(tweets); // the tweets!
+        //         })
+        //     })
+        // })
         // let client = new Twitter({
         //     consumer_key: 'uyR81RFWn2zVjf1mKyg5AhQGC',
         //     consumer_secret: 'BscbPybQIEhgUC9GFFWe0nHpgRxHD11TUk7qcLNDhfA4TtfWzz',
-        //     access_token_key: '3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq',
-        //     access_token_secret: 'y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s'
+        //     // access_token_key: '3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq',
+        //     // access_token_secret: 'y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s'
+        //     bearer_token: 'AAAAAAAAAAAAAAAAAAAAAJWu3gAAAAAARxdW5nqaAH7xwXI3nXjno1y0eTY%3Dnf8IqWsiegiw465OPQcwNfkQDzZUuYptLawh2jm8AHcGECzpFA'
         // });
 
-        // client.get('https://api.twitter.com/1.1/status/user_timeline.json', {screen_name: '100thieves', count: 3}, (error, tweets, response) => {
+        // client.get('status/user_timeline', {screen_name: '100thieves', count: 3}, (error, tweets, response) => {
         //     console.log(tweets)
         //     console.log(response)
         // })
 
-            // let config = {
-            //     withCredentials: true,
+            let config = {
+                headers: {
+                    'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAJWu3gAAAAAARxdW5nqaAH7xwXI3nXjno1y0eTY%3Dnf8IqWsiegiw465OPQcwNfkQDzZUuYptLawh2jm8AHcGECzpFA'
+                }
+            }
+             const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=2', config)
+              console.log(response)
+            // try {
+            //     const response = await axios({ method: 'get', url: 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=2',
+            //         headers: {'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAJWu3gAAAAAARxdW5nqaAH7xwXI3nXjno1y0eTY%3Dnf8IqWsiegiw465OPQcwNfkQDzZUuYptLawh2jm8AHcGECzpFA'} 
+            //     })
+            //     //axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=1', config)
+            //     console.log(response)
+            // }catch (e) {
+            //     console.log(e)
+            // }
+            
+            // axios({
+            //     method: 'get',
+            //     url: 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=10',
             //     headers: {
             //         'Authorization': 'OAuth oauth_consumer_key="uyR81RFWn2zVjf1mKyg5AhQGC",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513900512",oauth_nonce="E6rlGllZDKm",oauth_version="1.0",oauth_signature="PghiyaDLIxeb%2BZwfxxGmSBlS8zw%3D"'
             //     },
             //     withCredentials: true
-            // }
-            const response = await axios({
-                method: 'get',
-                url: 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=10',
-                headers: {
-                    'Authorization': 'OAuth oauth_consumer_key="uyR81RFWn2zVjf1mKyg5AhQGC",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513900512",oauth_nonce="E6rlGllZDKm",oauth_version="1.0",oauth_signature="PghiyaDLIxeb%2BZwfxxGmSBlS8zw%3D"'
-                },
-                withCredentials: true
-            })
-            //axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=2', config)
+            // })
+            //
 
-            console.log(response)
+            // console.log(response)
     }
 }
 </script>
@@ -205,7 +248,7 @@ input {
     display: block;
     background: none;
     border: none;
-    border-bottom: 1px solid #a1131b !important;
+    border-bottom: 1px solid #a1131b;
     width: 100%;
     font-weight: normal;
     font-size: 16px;

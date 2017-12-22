@@ -2,7 +2,7 @@
   "name": "100t-concept",
   "version": "1.0.0",
   "description": "Concept site for 100 Thieves",
-  "author": "mufassah <austin.davis820@gmail.com>",
+  "author": "Austin Davis <austin.davis820@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "https": "^1.0.0",
+    "oauth": "^0.9.15",
     "twitter": "^1.7.1",
     "vue": "^2.5.2",
     "vue-awesome": "^2.3.4",
