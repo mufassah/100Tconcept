@@ -1,7 +1,7 @@
 <template>
     <div class="featured-content">
         <div class="content-card">
-            <h1 class="featured-header">100 Thieves Schedule</h1>
+            <h1 class="featured-header">100Thieves Schedule</h1>
             <v-tabs fixed centered>
                 <v-tabs-bar class="my-bar">
                       <v-tabs-slider class="my-slider"></v-tabs-slider>
@@ -46,13 +46,13 @@
             </div>
             <div class="merch-ad">
             <h2>Purchase these and many more in the Store!</h2>
-            <a href="https://www.100thieves.com/store/" class="story-button">Browse</a>
+            <a href="https://www.100thieves.com/store/" class="story-button pulse-animation">Browse</a>
             </div>
         </div>
         <div class="twitter-card">
             <h1 class="featured-header">Recent Tweets</h1>
             <div class="twitter-container">
-                <a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
+                <a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
             </div>
         </div>
         <div class="newsletter-card">
@@ -64,7 +64,7 @@
                     <input type="text" required :rules="emailRules">
                     <label>Email</label>
                 </div>
-                <a href="/#/news" class="story-button">Sign Up</a>
+                <a href="/#/news" class="story-button pulse-animation">Sign Up</a>
                 </div>
             </form>
         </div>
@@ -248,9 +248,9 @@ input:focus ~ label, input:valid ~ label {
     display: flex;
     justify-content: space-between;
 }
-/* .merch-button{
+
+ .pulse-animation{
     height: 2.5em;
-    background: #ef3232;
     width: 8em;
 	text-align: center;
     
@@ -260,18 +260,18 @@ input:focus ~ label, input:valid ~ label {
     cursor: pointer;
     animation: pulse 3s ease-in-out infinite;
 }
-.merch-button:link {
+.pulse-animation:link {
   text-decoration:  none;
 } 
-.merch-button:visited {
+.pulse-animation:visited {
   text-decoration:  none;
 } 
 @keyframes pulse{
   0%, 70% {
-    box-shadow: 0px 0px 0px 0px rgba(224,224,224,.5)
+    box-shadow: 0px 0px 0px 0px rgba(220,220,220,.5)
   }
   100%{
-    box-shadow: 0 0px 0px 10px rgba(224,224,224,0)
+    box-shadow: 0 0px 0px 10px rgba(250, 115, 115, 0)
   }
-} */
+}
 </style>
