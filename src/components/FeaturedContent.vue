@@ -73,6 +73,7 @@
 
 <script>
 import axios from 'axios'
+import Twitter from 'twitter'
 export default {
     data() {
         return {
@@ -94,9 +95,36 @@ export default {
         }
     },
 	async created() {
-		console.log('calling Twitter...')
-            let config = {'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAJWu3gAAAAAARxdW5nqaAH7xwXI3nXjno1y0eTY%3Dnf8IqWsiegiw465OPQcwNfkQDzZUuYptLawh2jm8AHcGECzpFA'}
-            const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=5', config)
+        console.log('calling Twitter...')
+        // let client = new Twitter({
+        //     consumer_key: 'uyR81RFWn2zVjf1mKyg5AhQGC',
+        //     consumer_secret: 'BscbPybQIEhgUC9GFFWe0nHpgRxHD11TUk7qcLNDhfA4TtfWzz',
+        //     access_token_key: '3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq',
+        //     access_token_secret: 'y6bqGXO7LSUIhm1eRhJASHKEFemOd1WSpfT94VKXITc2s'
+        // });
+
+        // client.get('https://api.twitter.com/1.1/status/user_timeline.json', {screen_name: '100thieves', count: 3}, (error, tweets, response) => {
+        //     console.log(tweets)
+        //     console.log(response)
+        // })
+
+            // let config = {
+            //     withCredentials: true,
+            //     headers: {
+            //         'Authorization': 'OAuth oauth_consumer_key="uyR81RFWn2zVjf1mKyg5AhQGC",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513900512",oauth_nonce="E6rlGllZDKm",oauth_version="1.0",oauth_signature="PghiyaDLIxeb%2BZwfxxGmSBlS8zw%3D"'
+            //     },
+            //     withCredentials: true
+            // }
+            const response = await axios({
+                method: 'get',
+                url: 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=10',
+                headers: {
+                    'Authorization': 'OAuth oauth_consumer_key="uyR81RFWn2zVjf1mKyg5AhQGC",oauth_token="3293703617-XqHpqzr0Dpj3R39A8rqu8FMRlE0oUH66zGGwsjq",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1513900512",oauth_nonce="E6rlGllZDKm",oauth_version="1.0",oauth_signature="PghiyaDLIxeb%2BZwfxxGmSBlS8zw%3D"'
+                },
+                withCredentials: true
+            })
+            //axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=100thieves&count=2', config)
+
             console.log(response)
     }
 }
