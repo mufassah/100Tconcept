@@ -44,14 +44,15 @@ export default {
     background: #a1131b;
     width: 8em;
 	text-align: center;
-    font-weight: bold !important;
+    font-weight: bold;
     font-size: 1.1em;
     border-radius: 3px;
     line-height: 2.5em;
     color: #e0e0e0;
     cursor: pointer;
-    -webkit-transition: all ease-in-out 200ms;
+    /*-webkit-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
+    Wanted to see what the purpose of this thing was, couldn't figure it out. Didn't put much time into it */
 }
 .story-button:hover{
 	/* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
@@ -70,11 +71,11 @@ export default {
 }
 
 .slide-button-enter {
-  transform: translateY(35%);
+  transform: translateY(35%) scale(.2);
   opacity: 0;
 }
 .slide-button-leave-to {
-  transform: translateY(35%);
+  transform: translateY(35%) scale(.2);
   opacity: 0;
 }
 .news-block {
