@@ -46,27 +46,27 @@ export default {
 			{
 				src: '/static/images/100T-inv-lcs.png',
 				title: 'Welcome 100 Thieves to the NALCS!',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
 				src: '/static/images/pr0lly-news.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
 				src: '/static/images/pr0lly-news.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
 				src: '/static/images/pr0lly-news.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
 				src: '/static/images/pr0lly-news.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			}
 			]
 		}
@@ -75,6 +75,7 @@ export default {
 </script>
 
 <style>
+
 .featured-image {
 	width: 100%
 }
@@ -87,6 +88,7 @@ export default {
 	flex-direction: column;
 	flex: 1;
 	margin-right: 1em;
+	/*border-radius: 50px;*/
 }
 .first-story {
 	display: flex;

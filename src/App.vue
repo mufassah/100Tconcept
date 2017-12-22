@@ -38,7 +38,7 @@ export default {
 }
 body{
   background-color: #252525;
-  color: #e0e0e0;
+  color: #E8E7E7;
   font-family: 'gilroy', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
