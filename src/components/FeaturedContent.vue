@@ -271,7 +271,7 @@ input:focus ~ label, input:valid ~ label {
     box-shadow: 0px 0px 0px 0px rgba(220,220,220,.5)
   }
   100%{
-    box-shadow: 0 0px 0px 10px rgba(250, 115, 115, 0)
+    box-shadow: 0 0px 0px 7px rgba(250, 115, 115, 0)
   }
 }
 </style>

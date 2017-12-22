@@ -71,11 +71,11 @@ export default {
 }
 
 .slide-button-enter {
-  transform: translateY(35%) rotateY(90deg);
+  transform: translateY(35%) scale(.2);
   opacity: 0;
 }
 .slide-button-leave-to {
-  transform: translateY(35%) rotateY(90deg);
+  transform: translateY(35%) scale(.2);
   opacity: 0;
 }
 .news-block {
