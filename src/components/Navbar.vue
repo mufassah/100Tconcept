@@ -1,10 +1,10 @@
 <template>
-  <nav class= "nav-full">
+  <nav class="nav-full">
     <div class="nav-container">
-      <div class="nav-flex2 nav-items borderYtoX">
-      <a href="/#/news">NEWS</a>
-      <a href="/#/teams">TEAMS</a>
-      <a href="/#/content">CONTENT</a>
+      <div class="nav-flex2 nav-items">
+      	<a class="nav-link" href="/#/news">NEWS</a>
+      	<a class="nav-link" href="/#/teams">TEAMS</a>
+      	<a class="nav-link" href="/#/content">CONTENT</a>
     </div>
     <div class="nav-flex"> 
       <a class="nav-logo" href="/#/">
@@ -13,10 +13,10 @@
              height="200px">
       </a>
     </div>
-    <div class="nav-flex2 nav-items borderYtoX">
-    	<a href="https://www.100thieves.com/store/">STORE</a>
-      <a href="/#/partners">PARTNERS</a>
-      <a href="https://www.100thieves.com/contact-1/">CONTACT</a>
+    <div class="nav-flex2 nav-items">
+    	<a class="nav-link" href="https://www.100thieves.com/store/">STORE</a>
+      <a class="nav-link" href="/#/partners">PARTNERS</a>
+      <a class="nav-link" href="https://www.100thieves.com/contact-1/">CONTACT</a>
     </div>
     </div>
     
@@ -28,6 +28,7 @@
 </script>
 
 <style>
+
 .nav-container {
   width: 100%;
   max-width: 88.3em;
@@ -36,6 +37,7 @@
   justify-content: center;
   height: 7em;
 }
+
 .nav-items a {
   color: #e0e0e0;
     text-decoration: none;
@@ -56,6 +58,7 @@
   top: 0;
   z-index: 999; */
 }
+
 .nav-logo > img {
     height: 90%;
 }
@@ -117,17 +120,18 @@ a.nav-link:visited {
 } 
 a.nav-link:hover{
   text-decoration: none;
+  color: #E42832;
 }
 a.nav-link:active{
   text-decoration: none;
-  color: #a1131b;
 }
 
 
 
 
 
-div.borderYtoX a:before, div.borderYtoX a:after
+
+/*div.borderYtoX a:before, div.borderYtoX a:after
 {
     position: absolute;
     opacity: 0.5;
@@ -137,9 +141,11 @@ div.borderYtoX a:before, div.borderYtoX a:after
     background: #ef3232;
     transition: all 0.3s;
 }
+*/
 /*.active-link {
   box-shadow: 0 2px 5px #FFFFFF, 0 2px 1px #FFFFFF, 0 3px 1px -2px #FFFFFF;
-}*/
+}
+*/
 /*
 div.borderYtoX a.active-link:before, div.borderYtoX a.active-link:after {
   position: absolute;
@@ -149,7 +155,7 @@ div.borderYtoX a.active-link:before, div.borderYtoX a.active-link:after {
     content: '';
     background: white;
     transition: all 0.3s;
-}*/
+}
 div.borderYtoX a:before
 {
     left: 0px;
@@ -168,5 +174,6 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
     height: 2px;
     width: 100%;
 }
+*/
 
 </style>

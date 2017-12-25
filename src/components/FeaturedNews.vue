@@ -18,7 +18,7 @@
 				<div class="first-story-body" :style="{ backgroundImage: 'url(' + story.src + ')' }">
 					<div class="first-story-body-container">
 					<h2>{{story.title}}</h2>
-					<a href="/#/news" class="story-button">Read More</a>					
+					<a href="/#/news" class="story-button pulse-animation">Read More</a>					
 					</div>
 				</div>
 				</div>
@@ -46,27 +46,27 @@ export default {
 			{
 				src: '/static/images/100T-inv-lcs.png',
 				title: 'Welcome 100 Thieves to the NALCS!',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
+				src: '/static/images/prolly-suit.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				src: '/static/images/100t-csgo.png',
+				title: '100 Thieves acquires CS:GO team!',
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				src: '/static/images/aphromoo-news.jpg',
+				title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+				src: '/static/images/hoodie.jpg',
+				title: '100 Thieves merchandise is on sale now!',
+				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			}
 			]
 		}
@@ -75,6 +75,7 @@ export default {
 </script>
 
 <style>
+
 .featured-image {
 	width: 100%
 }
@@ -87,6 +88,7 @@ export default {
 	flex-direction: column;
 	flex: 1;
 	margin-right: 1em;
+	/*border-radius: 50px;*/
 }
 .first-story {
 	display: flex;

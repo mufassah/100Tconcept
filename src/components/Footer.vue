@@ -80,7 +80,7 @@
     font-size: 1.1em;
 }
 .footer-links:hover {
-  color: #a1131b;
+  color: #E42832;
 }
 .footer-container {
   margin: auto;
