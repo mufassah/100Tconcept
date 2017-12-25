@@ -158,7 +158,7 @@
     padding: 1em;
 }
 .card__text {
-    padding: .3em;
+    padding: .3em !important;
     
 }
 .schedule-row {
@@ -175,14 +175,6 @@
 .my-slider {
     background-color: #C71C26;
     border-color: #C71C26;
-}
-.schedule-temp {
-    display: flex;
-    justify-content: center;
-    height: 25em;
-}
-.schedule-temp > img {
-    height: 100%;
 }
 .twitter-container {
     display: flex;
@@ -223,7 +215,7 @@ input {
     background: none;
     border: none;
 
-    border-bottom: 1px solid #C71C26;
+    border-bottom: 1px solid #C71C26 !important;
 
     width: 100%;
     font-weight: normal;

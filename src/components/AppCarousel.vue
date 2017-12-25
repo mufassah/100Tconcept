@@ -13,6 +13,6 @@
 
 <style>
 .carousel {
-  height: 27em;
+  height: 27em !important;
 }
 </style>
