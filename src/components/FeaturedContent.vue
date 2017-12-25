@@ -100,7 +100,6 @@
             console.log('calling Twitter...')
             try {
                 const response = await axios.get('https://100thievesconcept.com/twitter')
-                console.log(response.data)
                 this.tweets = response.data
 
             } catch (e) {

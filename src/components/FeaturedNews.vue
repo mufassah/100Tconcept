@@ -49,23 +49,23 @@ export default {
 				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
+				src: '/static/images/prolly-suit.jpg',
 				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
 				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+				src: '/static/images/100t-csgo.png',
+				title: '100 Thieves acquires CS:GO team!',
 				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+				src: '/static/images/aphromoo-news.jpg',
+				title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
 				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			},
 			{
-				src: '/static/images/pr0lly-news.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+				src: '/static/images/hoodie.jpg',
+				title: '100 Thieves merchandise is on sale now!',
 				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 			}
 			]

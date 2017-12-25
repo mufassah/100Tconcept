@@ -18,16 +18,16 @@ export default {
     return {
       items: [
       {
-        src: '/static/images/aphromoo-news.jpg'
+        src: '/static/images/100T-inv-lcs.png'
+      },
+      {
+        src: '/static/images/100t-csgo.png'
       },
       {
         src: '/static/images/aphromoo-news.jpg'
       },
       {
-        src: '/static/images/aphromoo-news.jpg'
-      },
-      {
-        src: '/static/images/aphromoo-news.jpg'
+        src: '/static/images/prolly-suit.jpg'
       }
       ]
     }
