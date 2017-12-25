@@ -1,7 +1,7 @@
 <template>
     <div class="featured-content">
         <div class="content-card">
-            <h1 class="featured-header">100Thieves Schedule</h1>
+            <h1 class="featured-header">100 Thieves Schedule</h1>
             <v-tabs fixed centered>
                 <v-tabs-bar class="my-bar">
                   <v-tabs-slider class="my-slider"></v-tabs-slider>
@@ -169,7 +169,7 @@
     padding: 1em;
 }
 .card__text {
-    padding: .3em !important;
+    padding: .3em;
     
 }
 .schedule-row {
@@ -184,8 +184,8 @@
     background-color: #0f0f0f;
 }
 .my-slider {
-    background-color: #a1131b !important;
-    border-color: #a1131b !important;
+    background-color: #C71C26;
+    border-color: #C71C26;
 }
 .schedule-temp {
     display: flex;
@@ -233,7 +233,9 @@ input {
     display: block;
     background: none;
     border: none;
-    border-bottom: 1px solid #a1131b;
+
+    border-bottom: 1px solid #C71C26;
+
     width: 100%;
     font-weight: normal;
     font-size: 16px;
@@ -246,10 +248,11 @@ input:focus	{
 input:focus ~ label, input:valid ~ label {
     top:-10px;
     font-size:.9em;
-    color: #a1131b;
+    color: #C71C26;
 }
 .featured-content {
     flex: 1;
+    border-radius: 50px;
 }	
 .content-card {
     background-color: #1d1d1d;
@@ -268,6 +271,10 @@ input:focus ~ label, input:valid ~ label {
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
     margin-bottom: 1em;
     height: 56em;
+    /*
+    border: 3px solid #a1131b;
+    border-radius: 50px;
+    /*/
 }
 .newsletter-card {
     background-color: #1d1d1d;
@@ -275,11 +282,15 @@ input:focus ~ label, input:valid ~ label {
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
     margin-bottom: 1em;
     height: 18em;
+    /* 
+    border: 3px solid #a1131b;
+    border-radius: 50px;
+    */
 }
 .featured-header {
     border-left: 4px solid;
     padding-left: .5em;
-    border-color: #a1131b;
+    border-color: #C71C26;
     margin-bottom: 1em;
 }
 .featured-merch {

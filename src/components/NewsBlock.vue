@@ -41,7 +41,7 @@ export default {
 }
 .story-button {
     height: 2.5em;
-    background: #a1131b;
+    background: #BC151E;
     width: 8em;
 	text-align: center;
     font-weight: bold;
@@ -83,10 +83,11 @@ export default {
 	background-color: #1d1d1d;
 	padding: .25em;
 	margin-bottom: 1em;
-	border-left: 4px solid;
- 	padding-left: .5em;
+	border-left: 3px solid;
+ 	padding: .5em;
 	height: 18em;
-  border-color: #a1131b;
+  border-color: #C71C26;
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+  /*border-radius: 50px;*/
 }
 </style>
