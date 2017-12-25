@@ -52,7 +52,18 @@
 <div class="twitter-card">
     <h1 class="featured-header">Recent Tweets</h1>
     <div class="twitter-container">
-        <a class="twitter-timeline" data-width="520" data-height="600" data-theme="dark" data-link-color="#e0e0e0" href="https://twitter.com/100Thieves?ref_src=twsrc%5Etfw">Tweets by 100Thieves</a><script2 src="https://platform.twitter.com/widgets.js" charset="utf-8"></script2>
+        <div class="twitter-element-container" v-for="tweet in tweets">
+            <a :href="'https://twitter.com/statuses/' + tweet.id" class="twitter-element">
+            <div class="tweet-avatar">
+                <img :src="tweet.avi">
+            </div>
+            <div class="tweet-body">
+                <h3> {{tweet.name}} </h3>
+                <p>{{tweet.msg}}</p>
+                <!-- <p> {{tweet.created}}</p> -->
+            </div>
+            </a>
+        </div>
     </div>
 </div>
 <div class="newsletter-card">
@@ -92,14 +103,17 @@
                     game: 'CS:GO',
                     events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
                 }
-                ]
+                ],
+                tweets: []
             }
         },
         async created() {
             console.log('calling Twitter...')
             try {
-                const response = await axios.get('ec2-54-91-203-189.compute-1.amazonaws.com:3000/twitter')
-                console.log(response)
+                const response = await axios.get('https://100thievesconcept.com/twitter')
+                console.log(response.data)
+                this.tweets = response.data
+
             } catch (e) {
                 console.log(e)
             }
@@ -110,6 +124,40 @@
 </script>
 
 <style>
+    .twitter-element-container {
+        width: 100%;
+    }
+    .twitter-element {
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+        background-color: #2f2f2f;
+        display: flex;
+        padding: .5em;
+        width: 100%;
+        margin-bottom: .9em;
+        height: 6em;
+        text-decoration: none;
+        color: #e0e0e0;
+    }
+    .twitter-element:hover {
+        background-color: #1d1c1c;
+    }
+    .tweet-avatar {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+    .tweet-avatar img {
+            width: 80%;
+    border-radius: 50%;
+    }
+    .tweet-body {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        padding: .2em .5em;
+    }
     .tabs {
       box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
       height: 24.5em;
@@ -149,7 +197,8 @@
 }
 .twitter-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .twitter-container > iframe {
     height: 20em;
