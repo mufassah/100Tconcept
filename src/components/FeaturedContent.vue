@@ -51,20 +51,7 @@
 </div>
 <div class="twitter-card">
     <h1 class="featured-header">Recent Tweets</h1>
-    <div class="twitter-container">
-        <div class="twitter-element-container" v-for="tweet in tweets">
-            <a :href="'https://twitter.com/statuses/' + tweet.id" class="twitter-element">
-            <div class="tweet-avatar">
-                <img :src="tweet.avi">
-            </div>
-            <div class="tweet-body">
-                <h3> {{tweet.name}} </h3>
-                <p>{{tweet.msg}}</p>
-                <!-- <p> {{tweet.created}}</p> -->
-            </div>
-            </a>
-        </div>
-    </div>
+    <app-twitter-feed></app-twitter-feed>
 </div>
 <div class="newsletter-card">
     <h1 class="featured-header">Sign up for our Newsletter!</h1>
@@ -83,10 +70,12 @@
 </template>
 
 <script>
-    import axios from 'axios'
-    import Twitter from 'twitter'
+    import TwitterFeeds from './TwitterFeeds'
 
     export default {
+        components: {
+            appTwitterFeed: TwitterFeeds
+        },
         data() {
             return {
                 email: '',
@@ -136,7 +125,7 @@
         margin-bottom: .9em;
         height: 6em;
         text-decoration: none;
-        color: #e0e0e0;
+        color: #E8E7E7;
     }
     .twitter-element:hover {
         background-color: #1d1c1c;
