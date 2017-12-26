@@ -36,6 +36,7 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
 body{
   background-color: #252525;
   color: #E8E7E7;

@@ -20,11 +20,44 @@
     </div>
     </div>
     
-  </nav> 
+  
+  <transition name="slide-nav">
+  <div id="mySidenav" class="sidenav" v-if="openNav">
+    <a class="closebtn" @click="openNav = false">&times;</a>
+    <a class="nav-link" @click="openNav = false" href="/#/">HOME</a>
+    <a class="nav-link" @click="openNav = false" href="/#/news">NEWS</a>
+    <a class="nav-link" @click="openNav = false" href="/#/teams">TEAMS</a>
+    <a class="nav-link" @click="openNav = false" href="/#/content">CONTENT</a>
+    <a class="nav-link" @click="openNav = false" href="https://www.100thieves.com/store/">STORE</a>
+    <a class="nav-link" @click="openNav = false" href="/#/partners">PARTNERS</a>
+    <a class="nav-link" @click="openNav = false" href="https://www.100thieves.com/contact-1/">CONTACT</a>
+</div>
+</transition>
+  <div class="side-nav-full">
+  <span style="font-size:30px;cursor:pointer" @click="openNav = true">&#9776;</span>
+  <div class="nav-flex"> 
+      <a class="nav-logo" href="/#/">
+        <img src="../assets/100t-logo-optimized.svg"
+             width="200px"
+             height="200px">
+      </a>
+    </div>
+  </div>
+  <transition name="backdrop">
+  <div class="opacity-backdrop" v-if="openNav">
+  </div>
+  </transition>
+</nav> 
 </template>
 
 <script>
-
+export default {
+  data() {
+    return {
+      openNav: false
+    }
+  }
+}
 </script>
 
 <style>
@@ -126,54 +159,92 @@ a.nav-link:active{
   text-decoration: none;
 }
 
-
-
-
-
-
-/*div.borderYtoX a:before, div.borderYtoX a:after
-{
-    position: absolute;
-    opacity: 0.5;
+.sidenav {
     height: 100%;
-    width: 2px;
-    content: '';
-    background: #ef3232;
-    transition: all 0.3s;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
 }
-*/
-/*.active-link {
-  box-shadow: 0 2px 5px #FFFFFF, 0 2px 1px #FFFFFF, 0 3px 1px -2px #FFFFFF;
+
+.sidenav a {
+    display: flex;
+    justify-content: flex-start;
+    padding: .25em .75em;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    color: #E8E7E7;
 }
-*/
-/*
-div.borderYtoX a.active-link:before, div.borderYtoX a.active-link:after {
+
+.sidenav .closebtn {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.3em;
+}
+.side-nav-full {
+  display: none;
+}
+.opacity-backdrop {
   position: absolute;
-    opacity: 0.5;
-    height: 100%;
-    width: 2px;
-    content: '';
-    background: white;
-    transition: all 0.3s;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 998
 }
-div.borderYtoX a:before
-{
-    left: 0px;
-    top: 0px;
+.slide-nav-enter-active{
+  transition: all .5s ease;
+} 
+
+.slide-nav-leave-active {
+  transition: all .75s ease;
 }
 
-div.borderYtoX a:after
-{
-    right: 0px;
-    bottom: 0px;
+.slide-nav-enter {
+  transform: translateX(-100%);
+  width: 0;
+}
+.slide-nav-leave-to {
+  transform: translateX(-100%);
+  width: 0;
 }
 
-div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
-{
-    opacity: 1;
-    height: 2px;
+.backdrop-enter-active{
+  transition: all .5s ease;
+} 
+
+.backdrop-leave-active {
+  transition: all .6s ease;
+}
+
+.backdrop-enter {
+ opacity: 0;
+}
+.backdrop-leave-to {
+  opacity: 0
+}
+
+@media (max-width: 850px) {
+  .nav-container {
+    display: none;
+  }
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+  }
+  .side-nav-full {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    align-items: flex-start;
+    padding: .5em;
+  }
 }
-*/
 
 </style>
