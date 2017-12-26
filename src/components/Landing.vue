@@ -36,15 +36,16 @@ export default {
 </script>
 
 <style>
-@media (max-width: 850px) {
-  .app-body {
-    padding: 0 1.5em;
-  }
-}
+
 .app-body {
   width: 100%;
   max-width: 88.3em;
   margin: auto;
 }
 
+@media (max-width: 850px) {
+  .app-body {
+    padding: 0 1.5em;
+  }
+}
 </style>
