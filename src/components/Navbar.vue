@@ -44,7 +44,7 @@
     </div>
   </div>
   <transition name="backdrop">
-  <div class="opacity-backdrop" v-if="openNav">
+  <div class="opacity-backdrop" v-if="openNav" @click="openNav = false">
   </div>
   </transition>
 </nav> 

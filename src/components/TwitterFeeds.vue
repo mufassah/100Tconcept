@@ -66,7 +66,7 @@
 
     }
     .tweet-avatar img {
-        width: 80%;
+        width: 4.5em;
         border-radius: 50%;
     }
     .tweet-body {
@@ -80,5 +80,8 @@
         max-height: 4em;
     overflow-y: hidden;
     margin-bottom: 0 !important;
+    }
+    @media (max-width: 850px) {
+
     }
 </style>
