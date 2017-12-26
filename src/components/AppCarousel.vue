@@ -17,7 +17,7 @@
 }
 @media (max-width: 850px) {
 		.carousel {
-			display: none !important;
+			display: none;
 		}
 	}
 </style>

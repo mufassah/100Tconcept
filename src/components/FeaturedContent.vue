@@ -112,28 +112,6 @@
 </script>
 
 <style>
-    @media (max-width: 850px) {
-        .content-card {
-            width: 100%;
-            min-height: 10em !important;
-            /*justify-content: center;*/
-        }
-        .content-card iframe {
-            height: auto !important;
-        }
-        .tweet-avatar img {
-            width: 55% !important;
-    }
-    /*.merch-images {
-        flex-direction: column;
-    }*/
-    .featured-merch {
-        height: 9em !important;
-    }
-    .newsletter-card {
-        min-height: 20em !important;
-    }
-    }
 
 
     .twitter-element-container {
@@ -350,4 +328,28 @@ input:focus ~ label, input:valid ~ label {
     box-shadow: 0 0px 0px 7px rgba(250, 115, 115, 0)
 }
 }
+
+    @media (max-width: 850px) {
+        .content-card {
+            width: 100%;
+            min-height: 10em;
+            /*justify-content: center;*/
+        }
+        .content-card iframe {
+            height: auto;
+        }
+        .tweet-avatar img {
+            width: 55%;
+    }
+    /*.merch-images {
+        flex-direction: column;
+    }*/
+    .featured-merch {
+        height: 9em;
+    }
+    .newsletter-card {
+        min-height: 20em;
+    }
+    }
+
 </style>
