@@ -25,6 +25,7 @@
 </script>
 
 <style>
+
   .story-avatar {
    -webkit-box-flex: 1;
    -ms-flex: 1;

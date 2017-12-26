@@ -15,4 +15,9 @@
 .carousel {
   height: 27em !important;
 }
+@media (max-width: 850px) {
+		.carousel {
+			display: none !important;
+		}
+	}
 </style>
