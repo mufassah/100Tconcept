@@ -138,6 +138,14 @@
 		align-items: center;
 		height: 5em;
 	}
+	@media (min-width: 851px) {
+		.smaller-screen {
+			display: none;
+		}
+		.medium-screen {
+			display: none;
+		}
+	}
 	@media (max-width: 850px) {
 		.yt-content-card {
 	        width: 100%;
