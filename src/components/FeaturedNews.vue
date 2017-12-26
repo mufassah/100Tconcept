@@ -130,6 +130,7 @@
 		align-items: center;
 		padding: 1em;
 		background-size: cover;
+		background-position: center center;
 	}
 	.first-story-body-container {
 		display: flex;
@@ -144,6 +145,11 @@
 		}
 		.medium-screen {
 			display: none;
+		}
+	}
+	@media (max-width: 1300px) {
+		.featured-news {
+			margin-right: 0;
 		}
 	}
 	@media (max-width: 850px) {
@@ -169,9 +175,7 @@
 		.large-screen {
 			display: none;
 		}
-		.first-story-body {
-			background-position: center center;
-		}
+		
 	}
 	@media (max-width: 450px) {
 		.yt-content-card iframe {

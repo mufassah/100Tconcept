@@ -23,7 +23,7 @@ export default {
 		margin-top: 1em;
 	}
 
-	@media (max-width: 850px) {
+	@media (max-width: 1300px) {
 		.main-content {
 			flex-direction: column;
 		}

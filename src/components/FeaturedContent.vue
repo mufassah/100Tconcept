@@ -10,29 +10,58 @@
                   :key="i.game"
                   :href="'#tab-' + i.game"
                   >
+                  <h3 class="large-tab-head">
                   {{ i.game }}
+                  </h3>
+                  <h3 class="small-tab-head">
+                  {{ i.smallGame }}
+                  </h3>
               </v-tabs-item>
-          </v-tabs-bar>
-          <v-tabs-items>
-            <v-tabs-content
-            v-for="i in items"
-            :key="i.game"
-            :id="'tab-' + i.game"
-            >
-            <v-card flat>
-              <v-card-text
-              v-for="(event, index) in i.events"
-              :key="event"
-              >
-              <div class="schedule-row">
-                  <p>{{dates[index]}}</p>
-                  <p>{{ event }}</p>
-              </div>
-          </v-card-text>
-      </v-card>
-  </v-tabs-content>
-</v-tabs-items>
-</v-tabs>
+                </v-tabs-bar>
+
+                <!-- <v-tabs-items class="large-sched">
+                    <v-tabs-content
+                        v-for="i in items"
+                        :key="i.game"
+                        :id="'tab-' + i.game"
+                    >
+                        <v-card flat>
+                            <v-card-text
+                                v-for="(event, index) in i.events"
+                                :key="event"
+                            >
+                                <div class="schedule-row">
+                                    <p>{{dates[index]}}</p>
+                                    <p>{{ event }}</p>
+                                </div>
+                            </v-card-text>
+                        </v-card>
+                    </v-tabs-content>
+                </v-tabs-items> -->
+
+                <v-tabs-items class="sched">
+                    <v-tabs-content
+                        v-for="i in items"
+                        :key="i.game"
+                        :id="'tab-' + i.game"
+                    >
+                        <v-card flat>
+                            <v-card-text>
+                                <div class="schedule-column">
+                                    <div class="sched-info">
+                                    <h3> Next Event: </h3>
+                                    <h4> {{ i.smallEvent.title }} </h4>
+                                    <h4> {{ i.smallEvent.date }} </h4>
+                                    </div>
+                                    <div class="sched-img">
+                                    <img :src="i.smallEvent.image">
+                                    </div>
+                                </div>
+                            </v-card-text>
+                        </v-card>
+                    </v-tabs-content>
+                </v-tabs-items>
+            </v-tabs>
 </div>
 <div class="content-card">
     <h1 class="featured-header">Merchandise</h1>
@@ -86,10 +115,14 @@
                 dates: ['December 17', 'December 18', 'December 19', 'December 20', 'December 21', 'December 22', 'December 23'],
                 items: [{
                     game: 'League of Legends',
+                    smallGame: 'LoL',
+                    smallEvent: {title: 'LCS 100T vs OpTiC Gaming', date: 'January 20th 6:00PM EST', image: '/static/images/nalcs.png'},
                     events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
                 }, 
                 {
                     game: 'CS:GO',
+                    smallGame: 'CS:GO',
+                    smallEvent: {title: 'ELEAGUE Boston Major', date: 'January 26-28th 2018', image: '/static/images/eleagueBoston.png'},
                     events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
                 }
                 ],
@@ -152,10 +185,12 @@
       background-color:#2d2b2b;
   }
   .card {
-    padding: 1em;
+    padding: 0 1em;
+    height: 100% !important;
 }
 .card__text {
-    padding: .3em !important;
+    padding: 0 .3em !important;
+    height: 100%;
     
 }
 .schedule-row {
@@ -316,6 +351,38 @@ input:focus ~ label, input:valid ~ label {
 .pulse-animation:visited {
   text-decoration:  none;
 } 
+.small-tab-head {
+        display: none;
+    }
+    .sched {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 21em;
+    }
+    .schedule-column {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .sched-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .sched-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tabs__content{
+        height: 100%;
+    }
+    .schedule-column img {
+        width: 15em;
+    }
+
 @keyframes pulse{
   0%, 70% {
     box-shadow: 0px 0px 0px 0px rgba(220,220,220,.5)
@@ -323,6 +390,17 @@ input:focus ~ label, input:valid ~ label {
 100%{
     box-shadow: 0 0px 0px 7px rgba(250, 115, 115, 0)
 }
+}
+
+@media (min-width: 1300px) {
+    .sched-info {
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 1300px) {
+    .sched-info {
+        font-size: 1.5em;
+    }
 }
 
 @media (max-width: 850px) {
@@ -336,12 +414,42 @@ input:focus ~ label, input:valid ~ label {
     .newsletter-card {
         min-height: 20em;
     }
+    .sched {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .schedule-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+       /* border-bottom: 1px solid #e0e0e0;
+        padding: 0 .5em;
+        height: 2.17em;*/
+    }
+    .sched-info {
+        padding-top: 1em;
+        font-size: 1em;
+    }
 }
 
+@media (max-width: 600px) {
+    .large-tab-head {
+        display: none;
+    }
+    .small-tab-head {
+        display: flex;
+    }
+}
 @media (max-width: 450px) {
     .featured-merch {
         height: 9em;
     }
+    .schedule-column img {
+        width: 10em;
+    }
+    
 }
 
 </style>
