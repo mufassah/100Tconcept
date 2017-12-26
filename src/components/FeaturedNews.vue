@@ -2,31 +2,36 @@
 	<div class="featured-news">
 		<div class="content-card">
 			<h1 class="featured-header">Featured Video</h1>
-			<iframe width="560" height="347" src="https://www.youtube.com/embed/ZBZBM2fyl60" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<iframe width="560" height="347" src="https://www.youtube.com/embed/ZBZBM2fyl60" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="large-screen"></iframe>
+			<iframe width="275" height="150" src="https://www.youtube.com/embed/ZBZBM2fyl60" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="smaller-screen"></iframe>
 		</div>
-		
-		<div class="news-card" v-for="(story, i) in stories" :key="story">
-			<div class="content-card" v-if="i === 0">
-				
-					<h1 class="featured-header">
-						News
-					</h1>
-				<div class="first-story">
+		<div class="featured-news-card">
+		<div class="content-card">
+		<div class="featured-header">
+			<h1>
+				News
+			</h1>
+			</div>
+			<div class="first-story">
 				<!-- <div class="story-avatar">
 					<img class="featured-image" :src="story.src">
 				</div> -->
-				<div class="first-story-body" :style="{ backgroundImage: 'url(' + story.src + ')' }">
+				<div class="first-story-body" :style="{ backgroundImage: 'url(' + featuredStory.src + ')' }">
 					<div class="first-story-body-container">
-					<h2>{{story.title}}</h2>
-					<a href="/#/news" class="story-button pulse-animation">Read More</a>					
+						<h2>{{featuredStory.title}}</h2>
+						<a href="/#/news" class="story-button pulse-animation">Read More</a>					
 					</div>
 				</div>
-				</div>
-				
-				
 			</div>
-			<div v-else>
-			<app-home-news-block :story="story"></app-home-news-block>
+
+
+		</div>
+		</div>
+
+		<div class="news-card" v-for="(story, i) in stories" :key="story">
+			
+			<div>
+				<app-home-news-block :story="story"></app-home-news-block>
 			</div>
 			
 		</div>
@@ -35,81 +40,103 @@
 </template>
 
 <script>
-import NewsBlock from './NewsBlock'
-export default {
-	components: {
-		appHomeNewsBlock: NewsBlock
-	},
-	data () {
-		return {
-			stories: [
-			{
-				src: '/static/images/100T-inv-lcs.png',
-				title: 'Welcome 100 Thieves to the NALCS!',
-				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
-			},
-			{
-				src: '/static/images/prolly-suit.jpg',
-				title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
-			},
-			{
-				src: '/static/images/100t-csgo.png',
-				title: '100 Thieves acquires CS:GO team!',
-				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
-			},
-			{
-				src: '/static/images/aphromoo-news.jpg',
-				title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
-				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
-			},
-			{
-				src: '/static/images/hoodie.jpg',
-				title: '100 Thieves merchandise is on sale now!',
-				body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+	import NewsBlock from './NewsBlock'
+	export default {
+		components: {
+			appHomeNewsBlock: NewsBlock
+		},
+		data () {
+			return {
+				stories: [
+				{
+					src: '/static/images/prolly-suit.jpg',
+					title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+				},
+				{
+					src: '/static/images/100t-csgo.png',
+					title: '100 Thieves acquires CS:GO team!',
+					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+				},
+				{
+					src: '/static/images/aphromoo-news.jpg',
+					title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
+					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+				},
+				{
+					src: '/static/images/hoodie.jpg',
+					title: '100 Thieves merchandise is on sale now!',
+					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+				}
+				],
+				featuredStory: 
+				{
+					src: '/static/images/100T-inv-lcs.png',
+					title: 'Welcome 100 Thieves to the NALCS!',
+					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+				}
 			}
-			]
 		}
 	}
-}
 </script>
 
 <style>
-
-.featured-image {
-	width: 100%
-}
-.recent-news {
-	background-color: #1d1d1d;
-	padding: 2em;
-}
-.featured-news {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin-right: 1em;
-	/*border-radius: 50px;*/
-}
-.first-story {
-	display: flex;
-	height: 25em;
-    background-size: cover;
-	box-shadow: 0 2px 6px 2px rgba(0,0,0,.2), 0 1px 4px 2px rgba(0,0,0,.14), 0 2px 1px 2px rgba(0,0,0,.12);
-}
-.first-story-body {
-	flex: 3;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 1em;
-	background-size: cover;
-}
-.first-story-body-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	height: 5em;
-}
+	@media (max-width: 850px) {
+		.news-card {
+			display: none;
+		}
+		.featured-news {
+			margin-right: 0 !important;
+		}
+		.smaller-screen {
+			display: inline-block !important;
+		}
+		.large-screen {
+			display: none !important;
+		}
+		.first-story-body {
+			background-position: center center;
+		}
+	}
+	.smaller-screen {
+		display: none;
+	}
+	
+	.featured-image {
+		width: 100%
+	}
+	.recent-news {
+		background-color: #1d1d1d;
+		padding: 2em;
+	}
+	.featured-news {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		margin-right: 1em;
+		/*border-radius: 50px;*/
+	}
+	.first-story {
+		display: flex;
+		height: 25em;
+		width: 100%;
+		background-size: cover;
+		box-shadow: 0 2px 6px 2px rgba(0,0,0,.2), 0 1px 4px 2px rgba(0,0,0,.14), 0 2px 1px 2px rgba(0,0,0,.12);
+	}
+	.first-story-body {
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 1em;
+		background-size: cover;
+	}
+	.first-story-body-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 5em;
+	}
 </style>

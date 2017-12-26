@@ -76,4 +76,9 @@
         padding: .5em;
         justify-content: flex-start;
     }
+    .tweet-body p{
+        max-height: 4em;
+    overflow-y: hidden;
+    margin-bottom: 0 !important;
+    }
 </style>

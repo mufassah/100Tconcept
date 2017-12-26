@@ -112,6 +112,30 @@
 </script>
 
 <style>
+    @media (max-width: 850px) {
+        .content-card {
+            width: 100%;
+            min-height: 10em !important;
+            /*justify-content: center;*/
+        }
+        .content-card iframe {
+            height: auto !important;
+        }
+        .tweet-avatar img {
+            width: 55% !important;
+    }
+    /*.merch-images {
+        flex-direction: column;
+    }*/
+    .featured-merch {
+        height: 9em !important;
+    }
+    .newsletter-card {
+        min-height: 20em !important;
+    }
+    }
+
+
     .twitter-element-container {
         width: 100%;
     }
@@ -180,10 +204,6 @@
     flex-direction: column;
     align-items: center;
 }
-.twitter-container > iframe {
-    height: 20em;
-    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-}
 .newsletter {
     position: relative;
     width: 23em;
@@ -239,7 +259,11 @@ input:focus ~ label, input:valid ~ label {
     padding: 2em;
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
     margin-bottom: 1em;
-    height: 33em;
+    min-height: 33em;
+    max-height: 33em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .content-card iframe {
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
@@ -261,7 +285,8 @@ input:focus ~ label, input:valid ~ label {
     padding: 2em;
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
     margin-bottom: 1em;
-    height: 18em;
+    min-height: 18em;
+    max-height: 18em;
     /* 
     border: 3px solid #a1131b;
     border-radius: 50px;
@@ -272,6 +297,9 @@ input:focus ~ label, input:valid ~ label {
     padding-left: .5em;
     border-color: #C71C26;
     margin-bottom: 1em;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 .featured-merch {
     height: 18em;
@@ -280,6 +308,7 @@ input:focus ~ label, input:valid ~ label {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1em;
+    width: 100%;
 }
 .merch-item img {
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);

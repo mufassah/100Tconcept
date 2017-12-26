@@ -22,4 +22,10 @@ export default {
 		display: flex;
 		margin-top: 1em;
 	}
+
+	@media (max-width: 850px) {
+		.main-content {
+			flex-direction: column;
+		}
+	}
 </style>

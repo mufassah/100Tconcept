@@ -68,7 +68,19 @@
 </script>
 
 <style>
-*{padding: 0; margin: 0;}
+@media (max-width: 850px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .social-media {
+    padding: 0em 2em 0em 0em !important;
+    align-items: center !important;
+  }
+  .sm-header {
+    justify-content: center !important;
+  }
+}
 .footer-links {
     color: #e0e0e0;
     text-decoration: none;
