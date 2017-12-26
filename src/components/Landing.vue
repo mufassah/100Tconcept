@@ -53,4 +53,9 @@ export default {
   }
   
 }
+@media (max-width: 450px) {
+  .app-body {
+    padding: 0 1em;
+  }
+}
 </style>

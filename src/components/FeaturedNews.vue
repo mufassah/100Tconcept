@@ -177,7 +177,7 @@
 		}
 		
 	}
-	@media (max-width: 450px) {
+	@media (max-width: 650px) {
 		.yt-content-card iframe {
 			height: auto;
 		}
