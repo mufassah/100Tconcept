@@ -138,10 +138,6 @@
         align-items: flex-start;
 
     }
-    .tweet-avatar img {
-            width: 80%;
-    border-radius: 50%;
-    }
     .tweet-body {
         flex: 5;
         display: flex;
@@ -329,27 +325,23 @@ input:focus ~ label, input:valid ~ label {
 }
 }
 
-    @media (max-width: 850px) {
-        .content-card {
-            width: 100%;
-            min-height: 10em;
-            /*justify-content: center;*/
-        }
-        .content-card iframe {
-            height: auto;
-        }
-        .tweet-avatar img {
-            width: 55%;
+@media (max-width: 850px) {
+    .content-card {
+        width: 100%;
+        min-height: 10em;
     }
-    /*.merch-images {
-        flex-direction: column;
-    }*/
-    .featured-merch {
-        height: 9em;
+    .content-card iframe {
+        height: auto;
     }
     .newsletter-card {
         min-height: 20em;
     }
+}
+
+@media (max-width: 450px) {
+    .featured-merch {
+        height: 9em;
     }
+}
 
 </style>
