@@ -422,11 +422,10 @@ input:focus ~ label, input:valid ~ label {
     .schedule-column {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-       /* border-bottom: 1px solid #e0e0e0;
-        padding: 0 .5em;
-        height: 2.17em;*/
+        padding-bottom: 1em;
+
     }
     .sched-info {
         padding-top: 1em;

@@ -9,6 +9,7 @@
      <transition name="slide-button">
        <a href="/#/news" class="story-button" v-if="showButton">Read More</a>
      </transition>
+     <a href="/#/news" class="story-button-small">Read More</a>
    </div>
  </div>
 </template>
@@ -97,5 +98,37 @@
   height: 18em;
   border-color: #a1131b;
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
+.story-button-small {
+  display: none;
+  height: 2.5em;
+  background: #a1131b;
+  width: 8em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 3px;
+  line-height: 2.5em;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+.story-button-small:hover{
+   /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
+   text-decoration: none;
+ }
+
+ .story-button-small:link {
+  text-decoration:  none;
+} 
+.story-button-small:visited {
+  text-decoration:  none;
+} 
+@media (max-width: 1300px) {
+  .story-button {
+    display: none;
+  }
+  .story-button-small {
+    display: block;
+  }
 }
 </style>

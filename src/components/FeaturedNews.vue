@@ -50,17 +50,17 @@
 			return {
 				stories: [
 				{
-					src: '/static/images/prolly-suit.jpg',
+					src: '/static/images/prolly-suit-square.jpg',
 					title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
 				{
-					src: '/static/images/100t-csgo.png',
+					src: '/static/images/100t-csgo-square.jpg',
 					title: '100 Thieves acquires CS:GO team!',
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
 				{
-					src: '/static/images/aphromoo-news.jpg',
+					src: '/static/images/aphromoo-news-square.jpg',
 					title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
@@ -150,6 +150,12 @@
 	@media (max-width: 1300px) {
 		.featured-news {
 			margin-right: 0;
+		}
+		.story-avatar {
+			flex: 1 !important;
+		}
+		.story-avatar img {
+			width: 15em !important;
 		}
 	}
 	@media (max-width: 850px) {

@@ -26,8 +26,8 @@ export default {
         title: '100 Thieves acquires CS:GO team!'
       },
       {
-        src: '/static/images/aphromoo-news.jpg',
-        title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!'
+        src: '/static/images/aphromoo-mockup.png',
+        title: ''
       },
       {
         src: '/static/images/prolly-suit.jpg',
