@@ -26,20 +26,26 @@
 	align-items: flex-end;
 	padding: 1em;
 }
+.carousel-item-header h1 {
+	color: #E8E7E7;
+}
 a.carousel-item-header:link {
   /* Applies to all visited links */
-  text-decoration:  none;
+  text-decoration: none;
+  color: #E8E7E7;
 } 
 a.carousel-item-header:visited {
   /* Applies to all visited links */
-  text-decoration:  none;
+  text-decoration: none;
   color: #E8E7E7;
 } 
 a.carousel-item-header:hover{
   text-decoration: none;
+  color: #E8E7E7;
 }
 a.carousel-item-header:active{
   text-decoration: none;
+  color: #E8E7E7;
 }
 @media (max-width: 850px) {
 		.carousel {

@@ -92,6 +92,7 @@
                 <label>Email</label>
             </div>
             <a href="/#/news" class="story-button pulse-animation">Sign Up</a>
+            <a href="/#/news" class="story-button-small">Sign Up</a>
         </div>
     </form>
 </div>

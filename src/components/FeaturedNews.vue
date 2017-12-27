@@ -193,6 +193,14 @@
 		.smaller-screen {
 			display: inline-block;
 		}
+		.first-story-body {
+			background-image: url('/static/images/inv-lcs-temp.jpg') !important;
+		}
+	}
+	@media (max-width: 525px) {
+		.first-story-body {
+			background-image: url('/static/images/inv-lcs-tall.jpg') !important;
+		}
 	}
 
 </style>
