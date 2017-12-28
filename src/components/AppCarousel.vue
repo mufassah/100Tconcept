@@ -17,7 +17,7 @@
 
 <style>
 .carousel {
-  height: 27em !important;
+  height: 30em !important;
   color: #E8E7E7;
 }
 .carousel-item-header {

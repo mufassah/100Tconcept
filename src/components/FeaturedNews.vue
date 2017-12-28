@@ -56,12 +56,12 @@
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
 				{
-					src: '/static/images/100t-csgo-square.jpg',
+					src: '/static/images/csgo-thumbnail-1.png',
 					title: '100 Thieves acquires CS:GO team!',
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
 				{
-					src: '/static/images/aphromoo-news-square.jpg',
+					src: '/static/images/aphromoo-square.png',
 					title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
 					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
 				},
@@ -73,9 +73,9 @@
 				],
 				featuredStory: 
 				{
-					src: '/static/images/100T-inv-lcs.png',
-					title: 'Welcome 100 Thieves to the NALCS!',
-					body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+					src: '/static/images/welcome-100t-featured-news.png',
+					title: '',
+					body: ''
 				}
 			}
 		}

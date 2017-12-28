@@ -18,20 +18,20 @@ export default {
     return {
       items: [
       {
-        src: '/static/images/100T-inv-lcs.png',
-        title: 'Welcome 100 Thieves to the NALCS!'
-      },
-      {
-        src: '/static/images/100t-csgo.png',
-        title: '100 Thieves acquires CS:GO team!'
-      },
-      {
-        src: '/static/images/aphromoo-mockup.png',
+        src: '/static/images/carousel-mockup-no-light.png',
         title: ''
       },
       {
-        src: '/static/images/prolly-suit.jpg',
-        title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.'
+        src: '/static/images/100t-csgo-redone.png',
+        title: ''
+      },
+      {
+        src: '/static/images/100t-aphromoo-redone.png',
+        title: ''
+      },
+      {
+        src: '/static/images/pr0lly-redone.png',
+        title: ''
       }
       ]
     }
