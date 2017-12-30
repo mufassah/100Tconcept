@@ -19,19 +19,19 @@ export default {
       items: [
       {
         src: '/static/images/carousel-mockup-no-light.png',
-        title: ''
+        link: '/#/news'
       },
       {
         src: '/static/images/100t-csgo-redone.png',
-        title: ''
+        link: '/#/news'
       },
       {
         src: '/static/images/100t-aphromoo-redone.png',
-        title: ''
+        link: '/#/news'
       },
       {
         src: '/static/images/pr0lly-redone.png',
-        title: ''
+        link: '/#/news'
       }
       ]
     }

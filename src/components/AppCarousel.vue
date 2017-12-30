@@ -2,8 +2,7 @@
 	<v-carousel hide-delimiters
 	interval=10000>
 	<v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i">
-		<a href="/#/news" class="carousel-item-header">
-			<h1>{{item.title}}</h1>
+		<a :href="item.link" class="carousel-item-header">
 		</a>
 	</v-carousel-item>
 </v-carousel>
@@ -20,11 +19,14 @@
   height: 30em !important;
   color: #E8E7E7;
 }
+.carousel__item {
+	background-size: contain !important;
+}
 .carousel-item-header {
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
-	padding: 1em;
+	width: 100%;
 }
 .carousel-item-header h1 {
 	color: #E8E7E7;
@@ -46,6 +48,11 @@ a.carousel-item-header:hover{
 a.carousel-item-header:active{
   text-decoration: none;
   color: #E8E7E7;
+}
+@media (max-width: 1300px) {
+	.carousel {
+        height: 26.65em !important;
+    }
 }
 @media (max-width: 850px) {
 		.carousel {

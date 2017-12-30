@@ -76,6 +76,7 @@
     <div class="merch-ad">
         <h2>Purchase these and many more in the Store!</h2>
         <a href="https://www.100thieves.com/store/" class="story-button pulse-animation">Browse</a>
+        <a href="https://www.100thieves.com/store/" class="story-button-small">Browse </a>
     </div>
 </div>
 <div class="twitter-card">
