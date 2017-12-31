@@ -1,0 +1,39 @@
+@import 'colors'
+@import 'mixins'
+
+.twitter-element-container 
+    width: 100%
+
+.twitter-element
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
+  background-color: $featuredMedGrey
+  display: flex
+  padding: 0 .5em
+  width: 100%
+  margin-bottom: .9em
+  height: 6em
+  text-decoration: none
+  color: $lightGrey
+
+  &:hover
+    background-color: $featuredDrkGrey
+
+.tweet-avatar
+  flex: 1
+  @include disp-justifyCenter
+  align-items: center
+
+.tweet-avatar img
+  width: 4.5em
+  border-radius: 50%
+
+.tweet-body
+  flex: 5
+  @include disp-flexColumn
+  padding: .5em
+  justify-content: flex-start
+
+.tweet-body p
+  max-height: 4em
+  overflow-y: hidden
+  margin-bottom: 0 !important

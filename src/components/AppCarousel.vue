@@ -14,49 +14,6 @@
 	}
 </script>
 
-<style>
-.carousel {
-  height: 30em !important;
-  color: #E8E7E7;
-}
-.carousel__item {
-	background-size: contain !important;
-}
-.carousel-item-header {
-	height: 100%;
-	display: flex;
-	align-items: flex-end;
-	width: 100%;
-}
-.carousel-item-header h1 {
-	color: #E8E7E7;
-}
-a.carousel-item-header:link {
-  /* Applies to all visited links */
-  text-decoration: none;
-  color: #E8E7E7;
-} 
-a.carousel-item-header:visited {
-  /* Applies to all visited links */
-  text-decoration: none;
-  color: #E8E7E7;
-} 
-a.carousel-item-header:hover{
-  text-decoration: none;
-  color: #E8E7E7;
-}
-a.carousel-item-header:active{
-  text-decoration: none;
-  color: #E8E7E7;
-}
-@media (max-width: 1300px) {
-	.carousel {
-        height: 26.65em !important;
-    }
-}
-@media (max-width: 850px) {
-		.carousel {
-			display: none;
-		}
-	}
+<style lang="sass">
+	@import '../css/app-carousel.sass'
 </style>

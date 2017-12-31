@@ -1,0 +1,28 @@
+@import "colors"
+
+@font-face
+  font-family: 'gilroy'
+  src: url('./assets/fonts/Gilroy-ExtraBold.otf') format('otf')
+  font-weight: normal
+  font-style: normal
+
+body
+  background-color: $appBlack
+  color: $lightGrey
+  font-family: 'gilroy', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.rotate-in-enter-active
+  transition: transform .5s ease, opacity .25s
+
+.rotate-in-leave-active
+  transition: transform .75s, opacity .3s
+
+.rotate-in-enter
+  transform: translateX(50%)
+  opacity: 0;
+
+.rotate-in-leave-to 
+  transform: translateX(-135%)
+  opacity: 0
