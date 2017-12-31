@@ -1,4 +1,5 @@
 @import "colors"
+@import "mixins"
 
 .nav-container
   width: 100%
@@ -18,11 +19,11 @@
   cursor: pointer
 
 .nav-full
-  background: #0f0f0f
+  background: $footerBlack
   height: 7em
   padding-top: .2em
   padding-bottom: .2em
-  color: #e0e0e0
+  color: $navWhite
   margin-bottom: 3em
   // position: sticky;
    // top: 0;
@@ -47,15 +48,13 @@ a.nav-logo
   display: flex
 
 .nav-flex2
-  display: flex
+  @include disp-align-iCenter
   justify-content: space-around
-  align-items: center
   font-size: 1.2em
   width: 30em
 
 .nav-flex
-  display: flex
-  align-items: center
+  @include disp-align-iCenter
 
 .nav-items
   margin-left: 1em
@@ -67,11 +66,9 @@ a.nav-link
     // Applies to all visited links
     text-decoration: none
     color: $lightGrey
-  &:hover
+  &:hover, &:active
     text-decoration: none
     //  color: #E42832;
-  &:active
-    text-decoration: none
 
 .sidenav
   height: 100%
