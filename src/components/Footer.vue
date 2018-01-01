@@ -3,20 +3,20 @@
     <div class="footer-container">
       
         <div class="info-row">
-          <a class="footer-links" href="/#/">Home</a>
-          <a class="footer-links" href="/#/teams">Teams</a>
-          <a class="footer-links" href="/#/partners">Partners</a>
-          <a class="footer-links" href="#">Store</a>
+          <router-link class="footer-links" to="/">Home</router-link>
+          <router-link class="footer-links" to="/teams">Teams</router-link>
+          <router-link class="footer-links" to="/partners">Partners</router-link>
+          <a class="footer-links" href="https://www.100thieves.com/store/">Store</a>
           <a class="footer-links" href="https://www.100thieves.com/media-assets-1">Assets</a>
-          <a class="footer-links" href="/#/jobs">Jobs</a>
+          <router-link class="footer-links" to="/jobs">Jobs</router-link>
         </div>
 
         <div class="logo-copyright">
-          <a href="/#/">
+          <router-link to="/">
           <img src="../assets/100t-logo-optimized.svg"
              width="100px"
              height="100px">
-          </a>
+          </router-link>
           <p>© 100 THIEVES, LLC 2017</p>
         </div>     
       

@@ -20,8 +20,8 @@
 				<div class="first-story-body" :style="{ backgroundImage: 'url(' + featuredStory.src + ')' }">
 					<div class="first-story-body-container">
 						<h2>{{featuredStory.title}}</h2>
-						<a href="/#/news" class="story-button pulse-animation">Read More</a>
-						<a href="/#/news" class="story-button-small">Read More</a>					
+						<a href="/news" class="story-button pulse-animation">Read More</a>
+						<a href="/news" class="story-button-small">Read More</a>					
 					</div>
 				</div>
 			</div>

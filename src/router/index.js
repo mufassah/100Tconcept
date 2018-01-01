@@ -11,6 +11,7 @@ import Jobs from '@/components/Jobs'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '',

@@ -92,8 +92,8 @@
                 <input type="text" required :rules="emailRules">
                 <label>Email</label>
             </div>
-            <a href="/#/news" class="story-button pulse-animation">Sign Up</a>
-            <a href="/#/news" class="story-button-small">Sign Up</a>
+            <a href="/news" class="story-button pulse-animation">Sign Up</a>
+            <a href="/news" class="story-button-small">Sign Up</a>
         </div>
     </form>
 </div>
@@ -130,17 +130,6 @@
                 ],
                 tweets: []
             }
-        },
-        async created() {
-            console.log('calling Twitter...')
-            try {
-                const response = await axios.get('https://100thievesconcept.com/twitter')
-                this.tweets = response.data
-
-            } catch (e) {
-                console.log(e)
-            }
-            
 
         }
     }
