@@ -35,7 +35,13 @@
 a.nav-logo
   height: 6em
   &:link, &:visited
+  // Same as writing a.nav-logo:link, a.nav-logo:visited
     text-decoration: none
+  // You can't and shouldn't use an Extend here
+  // Extending properties from pseudo selectors is not allowed
+  // Extending anything in general is Fool's Gold. In theory, it's nice but it can turn into a sloppy mess really easily.
+  // If you were to extend this property to :hover / :active, it would render out in CSS with a copy of
+  // a.nav-logo:link, and a.nav-logo:visited
   &:hover, &:active
     text-decoration: none
     color: $navRed
@@ -48,6 +54,7 @@ a.nav-logo
   display: flex
 
 .nav-flex2
+  // Include Mixin
   @include disp-align-iCenter
   justify-content: space-around
   font-size: 1.2em
@@ -80,6 +87,7 @@ a.nav-link
   background-color: $navBlack
   overflow-x: hidden
   a
+  // Same as writing .sidenav a
     display: flex
     justify-content: flex-start
     padding: .25em .75em
@@ -88,6 +96,7 @@ a.nav-link
     display: block
     color: $navWhite
   .closebtn
+  // Same as writing .sidenav .closebtn
     display: flex
     justify-content: flex-end
     font-size: 2.3em
@@ -126,6 +135,7 @@ a.nav-link
 @media (min-width: 850px)
   a.nav-link
     &:after
+    // Same as writing a.nav-link:after
       display: block
       content: ''
       border-bottom: solid 2px $navRed
@@ -134,6 +144,7 @@ a.nav-link
       transform: scaleX(0.0001)
       -webkit-transition: -webkit-transform 250ms ease-in-out
       transition: transform 250ms ease-in-out
+    // a.nav-link:hover:after
     &:hover:after
       -webkit-transform: scaleX(1)
       -ms-transform: scaleX(1)

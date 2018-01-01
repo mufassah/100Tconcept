@@ -1,3 +1,4 @@
+// Import Mixins
 @import "colors"
 
 .carousel 
@@ -18,11 +19,14 @@
     color: $lightGrey
 
 a.carousel-item-header
-  &:link, &:visited
+
+  
+  &:link, &:visited // These two can be linked
+  // Same as writing a.carousel-item-header:link
     text-decoration: none
     color: $lightGrey
 
-  &:hover, &:active
+  &:hover, &:active // These can't
     text-decoration: none
     color: $lightGrey
 

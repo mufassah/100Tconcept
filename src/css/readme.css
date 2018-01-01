@@ -1,0 +1,29 @@
+Don't extend anything unless the two properties are really close to one another
+
+Only use @extend when the rulesets that you are trying to DRY out are inherently and thematically related. Do not force relationships that do not exist: to do so will create unusual groupings in your project, as well as negatively impacting the source order of your code.
+
+Use a mixin to either inject dynamic values into repeated constructs, or as a Sassy copy/paste which allows you to repeat the same group of declarations throughout your project.
+
+You can't extend from n(th) childs; You can't nest n(th) childs within divs.
+
+/* Loook at navbar.sass for a further detailed explanation of pseudo selectors and nesting / coupling them */
+
+
+If node spits an error back at you saying that it can't find a font or something like:
+
+@font-face
+  font-family: 'gilroy'
+
+  src: url('./assets/fonts/Gilroy-ExtraBold.otf') format('otf')
+  /* Node would spit out an error saying it can't locate the font from above
+		Throw a ~ somewhere between ('./ or put it between / and assets, so  ('./~assets/ 
+			This was also shortly after I made some changes for webpack to try and configure a plugin to translate all the SASS into one CSS file to be referenced
+		*/
+  font-weight: normal
+  font-style: normal
+
+
+SASS is the reverse ESLint in the sense that if you accidentally space anything, unless its for setting a property, it'll say something like "tabs were used
+throughout the project, but x line used a _\t" which means a space evidently. Use tabs or spaces, not both.
+
+
