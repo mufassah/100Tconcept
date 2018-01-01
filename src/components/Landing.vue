@@ -49,7 +49,7 @@ export default {
 
 @media (max-width: 1300px) {
   .app-body {
-      padding: 0 5em;
+    padding: 0 5em;
   }
   
 }

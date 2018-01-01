@@ -8,14 +8,6 @@
 		</div>
 		<div class="content-card">
 			<h1 class="featured-header">Work in Progress</h1>
-		</div><div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
 		</div>
 	</div>
 

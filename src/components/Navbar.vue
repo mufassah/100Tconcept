@@ -5,47 +5,47 @@
       	<router-link class="nav-link" to="/news">NEWS</router-link>
       	<router-link class="nav-link" to="/teams">TEAMS</router-link>
       	<router-link class="nav-link" to="/content">CONTENT</router-link>
+      </div>
+      <div class="nav-flex"> 
+        <router-link class="nav-logo" to="/">
+          <img src="../assets/100t-logo-optimized.svg"
+          width="200px"
+          height="200px">
+        </router-link>
+      </div>
+      <div class="nav-flex2 nav-items">
+       <a class="nav-link" href="https://www.100thieves.com/store/">STORE</a>
+       <router-link class="nav-link" to="/partners">PARTNERS</router-link>
+       <a class="nav-link" href="https://www.100thieves.com/contact-1/">CONTACT</a>
+     </div>
+   </div>
+   
+   
+   <transition name="slide-nav">
+    <div id="mySidenav" class="sidenav" v-if="openNav">
+      <a class="closebtn" @click="openNav = false">&times;</a>
+      <router-link class="nav-link" to="/"><p @click="openNav = false">HOME</p></router-link>
+      <router-link class="nav-link" to="/news"><p @click="openNav = false">NEWS</p></router-link>
+      <router-link class="nav-link" to="/teams"><p @click="openNav = false">TEAMS</p></router-link>
+      <router-link class="nav-link" to="/content"><p @click="openNav = false">CONTENT</p></router-link>
+      <a class="nav-link" href="https://www.100thieves.com/store/" @click="openNav = false"><p>STORE</p></a>
+      <router-link class="nav-link" to="/partners"><p @click="openNav = false">PARTNERS</p></router-link>
+      <a class="nav-link" href="https://www.100thieves.com/contact-1/" @click="openNav = false"><p>CONTACT</p></a>
     </div>
+  </transition>
+  <div class="side-nav-full">
+    <span style="font-size:30px;cursor:pointer" @click="openNav = true">&#9776;</span>
     <div class="nav-flex"> 
       <router-link class="nav-logo" to="/">
         <img src="../assets/100t-logo-optimized.svg"
-             width="200px"
-             height="200px">
-      </router-link>
-    </div>
-    <div class="nav-flex2 nav-items">
-    	<a class="nav-link" href="https://www.100thieves.com/store/">STORE</a>
-      <router-link class="nav-link" to="/partners">PARTNERS</router-link>
-      <a class="nav-link" href="https://www.100thieves.com/contact-1/">CONTACT</a>
-    </div>
-    </div>
-    
-  
-  <transition name="slide-nav">
-  <div id="mySidenav" class="sidenav" v-if="openNav">
-    <router-link class="closebtn" @click="openNav = false">&times;</router-link>
-    <router-link class="nav-link" @click="openNav = false" to="/">HOME</router-link>
-    <router-link class="nav-link" @click="openNav = false" to="/news">NEWS</router-link>
-    <router-link class="nav-link" @click="openNav = false" to="/teams">TEAMS</router-link>
-    <router-link class="nav-link" @click="openNav = false" to="/content">CONTENT</router-link>
-    <a class="nav-link" @click="openNav = false" href="https://www.100thieves.com/store/">STORE</a>
-    <router-link class="nav-link" @click="openNav = false" to="/partners">PARTNERS</router-link>
-    <a class="nav-link" @click="openNav = false" href="https://www.100thieves.com/contact-1/">CONTACT</a>
-</div>
-</transition>
-  <div class="side-nav-full">
-  <span style="font-size:30px;cursor:pointer" @click="openNav = true">&#9776;</span>
-  <div class="nav-flex"> 
-      <router-link class="nav-logo" to="/">
-        <img src="../assets/100t-logo-optimized.svg"
-             width="200px"
-             height="200px">
+        width="200px"
+        height="200px">
       </router-link>
     </div>
   </div>
   <transition name="backdrop">
-  <div class="opacity-backdrop" v-if="openNav" @click="openNav = false">
-  </div>
+    <div class="opacity-backdrop" v-if="openNav" @click="openNav = false">
+    </div>
   </transition>
 </nav> 
 </template>
@@ -61,7 +61,9 @@ export default {
 </script>
 
 <style>
-
+.side-nav-full > span {
+  color: #E8E7E7;
+}
 .nav-container {
   width: 100%;
   max-width: 88.3em;
@@ -73,12 +75,12 @@ export default {
 
 .nav-items a {
   color: #e0e0e0;
-    text-decoration: none;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
 }
 .nav-full{
   background: #0f0f0f;
@@ -93,7 +95,7 @@ export default {
 }
 
 .nav-logo > img {
-    height: 90%;
+  height: 90%;
 }
 a.nav-logo{
   height: 6em;
@@ -153,37 +155,37 @@ a.nav-link:visited {
 } 
 a.nav-link:hover{
   text-decoration: none;
-/*  color: #E42832;*/
+  /*  color: #E42832;*/
 }
 a.nav-link:active{
   text-decoration: none;
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
 }
 
 .sidenav a {
-    display: flex;
-    justify-content: flex-start;
-    padding: .25em .75em;
-    text-decoration: none;
-    font-size: 1.5em;
-    display: block;
-    color: #E8E7E7;
+  display: flex;
+  justify-content: flex-start;
+  padding: .25em .75em;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+  color: #E8E7E7;
 }
 
 .sidenav .closebtn {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2.3em;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2.3em;
 }
 .side-nav-full {
   display: none;
@@ -230,20 +232,20 @@ a.nav-link:active{
 }
 @media (min-width: 850px) {
   a.nav-link:after {
-  display:block;
-  content: '';
-  border-bottom: solid 2px #E42832;
-  -webkit-transform: scaleX(0.0001);
-  -ms-transform: scaleX(0.0001);
-  transform: scaleX(0.0001);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-}
-a.nav-link:hover:after {
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
-}
+    display:block;
+    content: '';
+    border-bottom: solid 2px #E42832;
+    -webkit-transform: scaleX(0.0001);
+    -ms-transform: scaleX(0.0001);
+    transform: scaleX(0.0001);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+  }
+  a.nav-link:hover:after {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 @media (max-width: 850px) {
   .nav-container {

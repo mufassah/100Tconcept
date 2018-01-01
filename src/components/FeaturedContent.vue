@@ -1,181 +1,184 @@
 <template>
     <div class="featured-content">
-        <div class="content-card">
-            <h1 class="featured-header">100 Thieves Schedule</h1>
-            <v-tabs fixed centered>
-                <v-tabs-bar class="my-bar">
-                  <v-tabs-slider class="my-slider"></v-tabs-slider>
-                  <v-tabs-item
-                  v-for="i in items"
-                  :key="i.game"
-                  :href="'#tab-' + i.game"
-                  >
-                  <h3 class="large-tab-head">
-                  {{ i.game }}
-                  </h3>
-                  <h3 class="small-tab-head">
-                  {{ i.smallGame }}
-                  </h3>
-              </v-tabs-item>
-                </v-tabs-bar>
+        <div class="featured-news-card">
+          <div class="content-card">
+              <div class="featured-header">
+               <h1>
+                News
+            </h1>
+        </div>
+        <div class="first-story">
+				<!-- <div class="story-avatar">
+					<img class="featured-image" :src="story.src">
+				</div> -->
+				<div class="first-story-body" :style="{ backgroundImage: 'url(' + featuredStory.src + ')' }">
+					<div class="first-story-body-container">
+						<h2>{{featuredStory.title}}</h2>
+						<a href="/news" class="story-button pulse-animation">Read More</a>
+						<a href="/news" class="story-button-small">Read More</a>					
+					</div>
+				</div>
+			</div>
 
-                <!-- <v-tabs-items class="large-sched">
-                    <v-tabs-content
-                        v-for="i in items"
-                        :key="i.game"
-                        :id="'tab-' + i.game"
-                    >
-                        <v-card flat>
-                            <v-card-text
-                                v-for="(event, index) in i.events"
-                                :key="event"
-                            >
-                                <div class="schedule-row">
-                                    <p>{{dates[index]}}</p>
-                                    <p>{{ event }}</p>
-                                </div>
-                            </v-card-text>
-                        </v-card>
-                    </v-tabs-content>
-                </v-tabs-items> -->
 
-                <v-tabs-items class="sched">
-                    <v-tabs-content
-                        v-for="i in items"
-                        :key="i.game"
-                        :id="'tab-' + i.game"
-                    >
-                        <v-card flat>
-                            <v-card-text>
-                                <div class="schedule-column">
-                                    <div class="sched-info">
-                                    <h3> Next Event: </h3>
-                                    <h4> {{ i.smallEvent.title }} </h4>
-                                    <h4> {{ i.smallEvent.date }} </h4>
-                                    </div>
-                                    <div class="sched-img">
-                                    <img :src="i.smallEvent.image">
-                                    </div>
-                                </div>
-                            </v-card-text>
-                        </v-card>
-                    </v-tabs-content>
-                </v-tabs-items>
-            </v-tabs>
+		</div>
+  </div>
+  <div class="news-card" v-for="(story, i) in stories" :key="story">
+
+   <div>
+    <app-home-news-block :story="story"></app-home-news-block>
+</div>
 </div>
 <div class="content-card">
-    <h1 class="featured-header">Merchandise</h1>
-    <div class="merch-images">
-        <div class="merch-item">
-            <img src="/static/images/hoodie.jpg" class="featured-merch">
-        </div>
-        <div class="merch-item">
-            <img src="/static/images/tshirt.jpg" class="featured-merch">
-        </div>
-    </div>
-    <div class="merch-ad">
-        <h2>Purchase these and many more in the Store!</h2>
-        <a href="https://www.100thieves.com/store/" class="story-button pulse-animation">Browse</a>
-        <a href="https://www.100thieves.com/store/" class="story-button-small">Browse </a>
-    </div>
-</div>
-<div class="twitter-card">
-    <h1 class="featured-header">Recent Tweets</h1>
-    <app-twitter-feed></app-twitter-feed>
-</div>
-<div class="newsletter-card">
-    <h1 class="featured-header">Sign up for our Newsletter!</h1>
-    <p class="newsletter-para">Stay up to date on everything 100 Thieves has to offer! Subscribe with your email below!</p>
-    <form>
-        <div class="form-container">
-            <div class="newsletter">      
-                <input type="text" required :rules="emailRules">
-                <label>Email</label>
+    <h1 class="featured-header">100 Thieves Schedule</h1>
+    <v-tabs fixed centered>
+        <v-tabs-bar class="my-bar">
+          <v-tabs-slider class="my-slider"></v-tabs-slider>
+          <v-tabs-item
+          v-for="i in items"
+          :key="i.game"
+          :href="'#tab-' + i.game"
+          >
+          <h3 class="large-tab-head">
+              {{ i.game }}
+          </h3>
+          <h3 class="small-tab-head">
+              {{ i.smallGame }}
+          </h3>
+      </v-tabs-item>
+  </v-tabs-bar>
+
+  <v-tabs-items class="sched">
+    <v-tabs-content
+    v-for="i in items"
+    :key="i.game"
+    :id="'tab-' + i.game"
+    >
+    <v-card flat>
+        <v-card-text>
+            <div class="schedule-column">
+                <div class="sched-info">
+                    <h3> Next Event: </h3>
+                    <h4> {{ i.smallEvent.title }} </h4>
+                    <h4> {{ i.smallEvent.date }} </h4>
+                </div>
+                <div class="sched-img">
+                    <img :src="i.smallEvent.image">
+                </div>
             </div>
-            <a href="/news" class="story-button pulse-animation">Sign Up</a>
-            <a href="/news" class="story-button-small">Sign Up</a>
-        </div>
-    </form>
+        </v-card-text>
+    </v-card>
+</v-tabs-content>
+</v-tabs-items>
+</v-tabs>
 </div>
+
 </div>
 </template>
 
 <script>
-    import TwitterFeeds from './TwitterFeeds'
+import NewsBlock from './NewsBlock'
 
-    export default {
-        components: {
-            appTwitterFeed: TwitterFeeds
-        },
-        data() {
-            return {
-                email: '',
-                emailRules: [
-                (v) => !!v || 'E-mail is required',
-                (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-                ],
-                dates: ['December 17', 'December 18', 'December 19', 'December 20', 'December 21', 'December 22', 'December 23'],
-                items: [{
-                    game: 'League of Legends',
-                    smallGame: 'LoL',
-                    smallEvent: {title: 'LCS 100T vs OpTiC Gaming', date: 'January 20th 6:00PM EST', image: '/static/images/nalcs.png'},
-                    events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
-                }, 
-                {
-                    game: 'CS:GO',
-                    smallGame: 'CS:GO',
-                    smallEvent: {title: 'ELEAGUE Boston Major', date: 'January 26-28th 2018', image: '/static/images/eleagueBoston.png'},
-                    events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
-                }
-                ],
-                tweets: []
-            }
-
+export default {
+    components: {
+       appHomeNewsBlock: NewsBlock
+   },
+   data() {
+    return {
+        email: '',
+        emailRules: [
+        (v) => !!v || 'E-mail is required',
+        (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+        ],
+        dates: ['December 17', 'December 18', 'December 19', 'December 20', 'December 21', 'December 22', 'December 23'],
+        items: [{
+            game: 'League of Legends',
+            smallGame: 'LoL',
+            smallEvent: {title: 'LCS 100T vs OpTiC Gaming', date: 'January 20th 6:00PM EST', image: '/static/images/nalcs.png'},
+            events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
+        }, 
+        {
+            game: 'CS:GO',
+            smallGame: 'CS:GO',
+            smallEvent: {title: 'ELEAGUE Boston Major', date: 'January 26-28th 2018', image: '/static/images/eleagueBoston.png'},
+            events: ['LCS vs TSM - W', 'LCS vs Liquid - 4:00pm', '', '', '', '', 'LCS vs GGS - 3:00pm' ]
         }
-    }
+        ],
+        stories: [
+        {
+         src: '/static/images/prolly-suit-square.jpg',
+         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+         body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+     },
+     {
+         src: '/static/images/csgo-thumbnail-1.png',
+         title: '100 Thieves acquires CS:GO team!',
+         body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+     },
+     {
+         src: '/static/images/aphromoo-square.png',
+         title: 'Welcome the newest addition to the League of Legends Roster, Aphromoo!',
+         body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+     },
+     {
+         src: '/static/images/hoodie.jpg',
+         title: '100 Thieves merchandise is on sale now!',
+         body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum odio fugit veritatis natus, similique necessitatibus minus possimus odit. Mollitia inventore officia, molestiae perspiciatis amet repellendus in quidem nobis labore.'
+     }
+     ],
+     featuredStory: 
+     {
+         src: '/static/images/welcome-100t-featured-news.png',
+         title: '',
+         body: ''
+     }
+ }
+
+}
+}
 </script>
 
 <style>
 
 
-    .twitter-element-container {
-        width: 100%;
-    }
-    .twitter-element {
-        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-        background-color: #2f2f2f;
-        display: flex;
-        padding: .5em;
-        width: 100%;
-        margin-bottom: .9em;
-        height: 6em;
-        text-decoration: none;
-        color: #E8E7E7;
-    }
-    .twitter-element:hover {
-        background-color: #1d1c1c;
-    }
-    .tweet-avatar {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+.twitter-element-container {
+    width: 100%;
+}
+.twitter-element {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    background-color: #2f2f2f;
+    display: flex;
+    padding: .5em;
+    width: 100%;
+    margin-bottom: .9em;
+    height: 6em;
+    text-decoration: none;
+    color: #E8E7E7;
+}
+.twitter-element:hover {
+    background-color: #1d1c1c;
+}
+.tweet-avatar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-    }
-    .tweet-body {
-        flex: 5;
-        display: flex;
-        flex-direction: column;
-        padding: .2em .5em;
-    }
-    .tabs {
-      box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-      height: 24.5em;
-  }
-  .tabs__items {
-      background-color:#2d2b2b;
-  }
-  .card {
+}
+.tweet-body {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    padding: .2em .5em;
+}
+.tabs {
+  box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+  height: 24.5em;
+}
+.tabs__items {
+  background-color:#2d2b2b;
+}
+.card {
     padding: 0 1em;
     height: 100% !important;
 }
@@ -343,36 +346,36 @@ input:focus ~ label, input:valid ~ label {
   text-decoration:  none;
 } 
 .small-tab-head {
-        display: none;
-    }
-    .sched {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 21em;
-    }
-    .schedule-column {
-        display: flex;
-        justify-content: space-around;
-        height: 100%;
-    }
-    .sched-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .sched-img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .tabs__content{
-        height: 100%;
-    }
-    .schedule-column img {
-        width: 15em;
-    }
+    display: none;
+}
+.sched {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 21em;
+}
+.schedule-column {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.sched-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sched-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabs__content{
+    height: 100%;
+}
+.schedule-column img {
+    width: 15em;
+}
 
 @keyframes pulse{
   0%, 70% {

@@ -15,41 +15,41 @@
 </template>
 
 <script>
-  export default {
-    props: ['story'],
-    data() {
-      return {
-       showButton: false
-     }
+export default {
+  props: ['story'],
+  data() {
+    return {
+     showButton: false
    }
  }
+}
 </script>
 
 <style>
 
-  .story-avatar {
-   -webkit-box-flex: 1;
-   -ms-flex: 1;
-   flex: 2;
-   padding: 1em;
-   margin: auto;
- }
- .story-avatar img {
-    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-    width: 100%;
- }
- .story-body {
-   flex: 3;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   padding: 1em;
- }
- .story-body h3 {
+.story-avatar {
+ -webkit-box-flex: 1;
+ -ms-flex: 1;
+ flex: 2;
+ padding: 1em;
+ margin: auto;
+}
+.story-avatar img {
+  box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+  width: 100%;
+}
+.story-body {
+ flex: 3;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ padding: 1em;
+}
+.story-body h3 {
   margin-bottom: 1em;
   font-size: 1.3em;
- }
- .story-button {
+}
+.story-button {
   height: 2.5em;
   background: #a1131b;
   width: 8em;
@@ -93,10 +93,10 @@
 	background-color: #1d1d1d;
 	padding: .25em;
 	margin-bottom: 1em;
-	border-left: 4px solid;
+	/* border-left: 4px solid; */
   padding-left: .5em;
   height: 18em;
-  border-color: #a1131b;
+  /* border-color: #a1131b; */
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 .story-button-small {
@@ -113,11 +113,11 @@
   cursor: pointer;
 }
 .story-button-small:hover{
-   /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
-   text-decoration: none;
- }
+ /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
+ text-decoration: none;
+}
 
- .story-button-small:link {
+.story-button-small:link {
   text-decoration:  none;
 } 
 .story-button-small:visited {
