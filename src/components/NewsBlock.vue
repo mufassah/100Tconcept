@@ -130,5 +130,11 @@ export default {
   .story-button-small {
     display: block;
   }
+  .story-avatar {
+		flex: 1 !important;
+	}
+	.story-avatar img {
+		width: 15em !important;
+	}
 }
 </style>

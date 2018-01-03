@@ -254,7 +254,7 @@ a.nav-link:active{
   .sidenav {
     display: flex;
     flex-direction: column;
-    width: 18em;
+    width: 65%;
   }
   .side-nav-full {
     display: flex;

@@ -1,18 +1,22 @@
 <template>
-    <div class="twitter-container">
-        <div class="twitter-element-container" v-for="tweet in tweets">
-            <a :href="'https://twitter.com/statuses/' + tweet.id" class="twitter-element">
-                <div class="tweet-avatar">
-                    <img :src="tweet.avi">
-                </div>
-                <div class="tweet-body">
-                    <h3> {{tweet.name}} </h3>
-                    <p>{{tweet.msg}}</p>
-                    <!-- <p> {{tweet.created}}</p> -->
-                </div>
-            </a>
+    <div class="twitter-card">
+        <h1 class="featured-header">Recent Tweets</h1>
+        <div class="twitter-container">
+            <div class="twitter-element-container" v-for="tweet in tweets" :key="tweet">
+                <a :href="'https://twitter.com/statuses/' + tweet.id" class="twitter-element">
+                    <div class="tweet-avatar">
+                        <img :src="tweet.avi">
+                    </div>
+                    <div class="tweet-body">
+                        <h3> {{tweet.name}} </h3>
+                        <p>{{tweet.msg}}</p>
+                        <!-- <p> {{tweet.created}}</p> -->
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
+    
 </template>
 
 <script>
@@ -41,6 +45,18 @@ export default {
 </script>
 
 <style>
+.twitter-card {
+    background-color: #1d1d1d;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+    margin-bottom: 1em;
+    height: 56em;
+}
+.twitter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .twitter-element-container {
     width: 100%;
 }
@@ -80,8 +96,5 @@ export default {
     max-height: 4em;
     overflow-y: hidden;
     margin-bottom: 0 !important;
-}
-@media (max-width: 850px) {
-
 }
 </style>
