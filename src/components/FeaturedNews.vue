@@ -49,7 +49,7 @@ export default {
 }
 @media (min-width: 1300px) {
 	.non-desktop-view {
-		display: none;
+		display: none !important;
 	}
 }
 @media (max-width: 1300px) {
