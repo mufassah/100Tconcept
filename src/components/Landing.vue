@@ -1,8 +1,10 @@
 <template>
+<keep-alive>
   <div class="app-body">
     <app-carousel :items="items"></app-carousel>
     <app-main-content></app-main-content>      
   </div>
+</keep-alive>
 </template>
 
 <script>

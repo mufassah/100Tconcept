@@ -2,9 +2,7 @@
   <div id="app">
     <app-navbar></app-navbar>  
     <transition name="rotate-in" mode="out-in"> 
-      <keep-alive>
         <router-view> </router-view>
-      </keep-alive>
     </transition>
     <app-footer></app-footer>
   </div>
