@@ -1,6 +1,6 @@
 <template>
 	<div class="sub-news">
-        <transition-group name="slide-in-bottom">
+        <transition-group name="slide-in-left">
         <div class="sub-news-row-container" v-for="(number, index) in loaded" :key="number">
 		<app-sub-news-row :stories="stories[index]"></app-sub-news-row>
         </div>
@@ -116,11 +116,11 @@ export default {
     display: flex;
     justify-content: space-between;
 }
-.slide-in-bottom-enter-active{
+.slide-in-left-enter-active{
   transition: all .75s ease;
 } 
-.slide-in-bottom-enter {
-  transform: translateY(50%);
+.slide-in-left-enter {
+  transform: translateX(50%);
   opacity: 0;
 }
 </style>
