@@ -1,16 +1,27 @@
 <template>
 	<div class="temp">
-		<div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
-		</div>
-		<div class="content-card">
-			<h1 class="featured-header">Work in Progress</h1>
-		</div>
+		<div class="container">
+			<div>
+				<a href="https://twitter.com/Nadeshot">
+    			<img class="nade" src="../assets/nadeshot-white-artboard.svg"
+    			width="500px"
+    			height="500px"></a>
+			</div>
+			<div>
+				<a href="https://twitter.com/cavsdan">
+    		<img class="cavs" src="../assets/CLE_logo-new-artboard.svg"
+    		width="500px"
+    		height="500px"></a>
+			</div>
+    	<div>
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint fuga repellendus deleniti, veritatis quos. Quis deleniti voluptatem inventore eius mollitia facere ad et, repudiandae laudantium! Fugiat cupiditate tempore iusto eligendi.
+    	</div>
+    	<div>
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quos, est ipsam illum vero sunt itaque molestias consectetur rem reprehenderit minima officiis soluta voluptas nisi fugiat qui cumque, hic tempora.
+    	</div>
+    	</div>
+  	</div>
 	</div>
-
 </template>
 
 <script>
@@ -24,10 +35,35 @@ export default {
 </script>
 
 <style>
-.temp {
-    width: 100%;
-    max-width: 88.3em;
-    margin: auto;
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr 200px;
+	grid-gap: 4em;
+	background-color: #1d1d1d;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 
+.container div:nth-child(1n) {
+	display: flex;
+	justify-content: center;
+	background-color: #232323;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+}
+
+.container div:nth-child(3n) {
+	background-color: #232323;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+	opacity: 0.8;
+	font-size: 2em;
+}
+
+
+.container div:nth-child(4n) {
+	background-color: #232323;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
+	opacity: 0.8;
+	font-size: 2em;
+}
 </style>
