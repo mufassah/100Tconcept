@@ -57,12 +57,10 @@ export default {
 	font-size: 2em;
 }
 
-
 .container div:nth-child(4n) {
 	background-color: #1A1919;
 	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 	font-size: 2em;
 }
-
 
 </style>
