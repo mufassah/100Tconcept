@@ -41,29 +41,28 @@ export default {
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr 200px;
 	grid-gap: 4em;
-	background-color: #1d1d1d;
   box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 
 .container div:nth-child(1n) {
 	display: flex;
 	justify-content: center;
-	background-color: #232323;
+	background-color: #0D0D0D;
 	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
 }
 
 .container div:nth-child(3n) {
-	background-color: #232323;
+	background-color: #1A1919;
 	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-	opacity: 0.8;
 	font-size: 2em;
 }
 
 
 .container div:nth-child(4n) {
-	background-color: #232323;
+	background-color: #1A1919;
 	box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
-	opacity: 0.8;
 	font-size: 2em;
 }
+
+
 </style>
