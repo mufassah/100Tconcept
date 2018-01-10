@@ -28,7 +28,7 @@ export default {
         link: '/news'
       },
       {
-        src: '/static/images/100t-aphromoo-redone2.png',
+        src: '/static/images/100t-aphromoo-redone.png',
         link: '/news'
       },
       {

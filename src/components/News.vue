@@ -33,5 +33,15 @@ export default {
     flex-direction: column;
     align-items: center;
 }
+@media (max-width: 1300px) {
+  .news-home {
+    padding: 0 5em;
+  }
+}
 
+@media (max-width: 450px) {
+  .news-home {
+    padding: 0 1em;
+  }
+}
 </style>
