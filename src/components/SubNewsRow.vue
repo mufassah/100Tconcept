@@ -25,9 +25,7 @@ export default {
     padding: 2em;
     box-shadow: 0 2px 8px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.14), 0 3px 1px 1px rgba(0,0,0,.12);
     margin-bottom: 1em;
-    min-height: 25em;
     max-height: 25em;
-    min-width: 25em;
     max-width: 25em;
     flex: 1;
     display: flex;
@@ -60,8 +58,48 @@ animation-delay: .4s;
 }
 
 .fade-in.three {
--webkit-animation-delay: .6s;
--moz-animation-delay: .6s;
-animation-delay: .6s;
+-webkit-animation-delay: .8s;
+-moz-animation-delay: .8s;
+animation-delay: .8s;
+}
+@media (max-width: 1200px) {
+    .sub-news-row {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 860px) {
+    .sub-news-row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .sub-news-body {
+        max-width: 40em;
+        min-height: 35em;
+        max-height: 35em;
+    }
+    .sub-news-body > img {
+        height: 25em;
+    }
+}
+@media (max-width: 675px) {
+    .sub-news-row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .sub-news-body {
+        max-width: 35em;
+        min-height: 25em;
+        max-height: 25em;
+    }
+    .sub-news-body > img {
+        height: 15em;
+    }
+}
+@media (max-width: 540px) {
+    .sub-news-body > img {
+        height: 10em;
+    }
 }
 </style>
