@@ -1,8 +1,10 @@
 <template>
 	<div class="sub-news">
-        <div class="sub-news-row-container" v-for="(number, index) in loaded" :key="number">
-		<app-sub-news-row :stories="stories[index]"></app-sub-news-row>
-        </div>
+        <transition-group name="slide-up">
+            <div class="sub-news-row-container" v-for="(number, index) in loaded" :key="number">
+                <app-sub-news-row :stories="stories[index]"></app-sub-news-row>
+            </div>
+        </transition-group>
         <div class="news-button">
             <a class="news-btn pulse-animation" @click="loaded += 1" v-if="loaded < loadedMax">Load More</a>
         </div>
@@ -151,7 +153,6 @@ export default {
                     storyNum: 'three'
                 }]]
             }
-                console.log(screen.width)
         }  
     }
 }
@@ -192,5 +193,13 @@ export default {
 .sub-news-row-container {
     display: flex;
     justify-content: space-between;
+    max-height: 30em;
+}
+
+.slide-up-enter {
+    max-height: 0em;
+}
+.slide-up-enter-active {
+    transition: all .7s linear;
 }
 </style>
