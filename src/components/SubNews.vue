@@ -1,10 +1,8 @@
 <template>
 	<div class="sub-news">
-        <transition-group name="slide-in-left">
         <div class="sub-news-row-container" v-for="(number, index) in loaded" :key="number">
 		<app-sub-news-row :stories="stories[index]"></app-sub-news-row>
         </div>
-        </transition-group>
         <div class="news-button">
             <a class="news-btn pulse-animation" @click="loaded += 1" v-if="loaded < 4">Load More</a>
         </div>
@@ -24,51 +22,63 @@ export default {
             stories: [
                 [{
                     src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.'
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
                 },
                 {
                     src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!'
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!'
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.'
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
                 },
                 {
                     src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!'
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!'
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.'
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
                 },
                 {
                     src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!'
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!'
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.'
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
                 },
                 {
                     src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!'
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!'
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
                 }]
             ]
 		}
@@ -93,12 +103,8 @@ export default {
   line-height: 2.5em;
   color: #e0e0e0;
   cursor: pointer;
-    /*-webkit-transition: all ease-in-out 200ms;
-    transition: all ease-in-out 200ms;
-    Wanted to see what the purpose of this thing was, couldn't figure it out. Didn't put much time into it */
   }
   .news-btn:hover{
-   /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
    text-decoration: none;
  }
 
@@ -115,12 +121,5 @@ export default {
 .sub-news-row-container {
     display: flex;
     justify-content: space-between;
-}
-.slide-in-left-enter-active{
-  transition: all .75s ease;
-} 
-.slide-in-left-enter {
-  transform: translateX(50%);
-  opacity: 0;
 }
 </style>
