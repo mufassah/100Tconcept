@@ -1,6 +1,6 @@
 <template>
     <div class="sub-news-row">
-    <div class="sub-news-body" v-for="story in stories" :key="story">
+    <div class="sub-news-body fade-in" v-for="story in stories" :key="story" :class="story.storyNum">
         <h1 class="featured-header">{{ story.title }}</h1>
         <img :src="story.src">
     </div>
@@ -36,5 +36,32 @@ export default {
 }
 .sub-news-body > img {
     height: 12em;
+}
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: .4s;
+-moz-animation-delay:.4s;
+animation-delay: .4s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: .6s;
+-moz-animation-delay: .6s;
+animation-delay: .6s;
 }
 </style>
