@@ -68,11 +68,6 @@ animation-delay: .4s;
 -moz-animation-delay: .8s;
 animation-delay: .8s;
 }
-@media (max-width: 1200px) {
-    .sub-news-row {
-        justify-content: space-around;
-    }
-}
 @media (max-width: 860px) {
     .sub-news-header {
         font-size: 1.5em;
