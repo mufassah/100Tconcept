@@ -17,20 +17,21 @@ export default {
 
 <style>
 .sub-news-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 88.3em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 400px;
+    margin-bottom: 2em;
 }
 
 .sub-news-body {
     background-color: #1d1d1d;
-    padding: 2em;
+    padding: 4em;
     box-shadow: 0 5px 10px 1px rgba(0,0,0,0.25), 0 3px 14px 2px rgba(0,0,0,0.24), 0 5px 5px -3px rgba(0,0,0,0.3);
-    height: 0; 
-    width:30%;
-    padding-bottom:30%; 
-    margin: 0 .3em 1em .3em;
+    height: 98%; 
+    width: 100%;
+    /*padding-bottom:30%;
+    margin: 0em 0em 4em 0em;*/
     flex: 1;
     background-size: cover;
     position: relative;

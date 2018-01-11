@@ -24,12 +24,12 @@ export default {
             loaded: 1,
             loadedMax: 4,
             stories: [[{
-                    src: '/static/images/prolly-suit-square.jpg',
+                    src: '/static/images/dec-update-100t.png',
                     title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
                     storyNum: 'one'
                 },
                 {
-                    src: '/static/images/csgo-thumbnail-1.png',
+                    src: '/static/images/csgo-bg.png',
                     title: '100 Thieves acquires CS:GO team!',
                     storyNum: 'two'
                 },
@@ -249,7 +249,7 @@ export default {
 .news-btn:visited {
   text-decoration:  none;
 } 
-.sub-news {
+/*.sub-news {
     display: flex;
     flex-direction: column;
 }
@@ -257,7 +257,7 @@ export default {
     display: flex;
     justify-content: space-between;
     max-height: 30em;
-}
+}*/
 
 .slide-up-enter {
     max-height: 0em;
