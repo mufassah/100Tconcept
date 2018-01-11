@@ -23,142 +23,205 @@ export default {
 		return {
             loaded: 1,
             loadedMax: 4,
-            stories: []
+            stories: [[{
+                    src: '/static/images/prolly-suit-square.jpg',
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
+                },
+                {
+                    src: '/static/images/csgo-thumbnail-1.png',
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
+                },
+                {
+                    src: '/static/images/aphromoo-square.png',
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
+                }],
+                [{
+                    src: '/static/images/prolly-suit-square.jpg',
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
+                },
+                {
+                    src: '/static/images/csgo-thumbnail-1.png',
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
+                },
+                {
+                    src: '/static/images/aphromoo-square.png',
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
+                }],
+                [{
+                    src: '/static/images/prolly-suit-square.jpg',
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
+                },
+                {
+                    src: '/static/images/csgo-thumbnail-1.png',
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
+                },
+                {
+                    src: '/static/images/aphromoo-square.png',
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
+                }],
+                [{
+                    src: '/static/images/prolly-suit-square.jpg',
+                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    storyNum: 'one'
+                },
+                {
+                    src: '/static/images/csgo-thumbnail-1.png',
+                    title: '100 Thieves acquires CS:GO team!',
+                    storyNum: 'two'
+                },
+                {
+                    src: '/static/images/aphromoo-square.png',
+                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    storyNum: 'three'
+                }]]
 		}
 	},
     computed: {
         screenSize () {
-            if (screen.width <= 1200 && screen.width > 675 ){
-                this.stories = [[{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                }],
-                [{
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'two'
-                }],
-                [{
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'two'
-                }],
-                [{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                }],
-                [{
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'two'
-                }],
-                [{
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'two'
-                }]]
-                this.loadedMax = 6
-            }
-            else {
-                this.stories = [[{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'three'
-                }],
-                [{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'three'
-                }],
-                [{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'three'
-                }],
-                [{
-                    src: '/static/images/prolly-suit-square.jpg',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
-                    storyNum: 'one'
-                },
-                {
-                    src: '/static/images/csgo-thumbnail-1.png',
-                    title: '100 Thieves acquires CS:GO team!',
-                    storyNum: 'two'
-                },
-                {
-                    src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
-                    storyNum: 'three'
-                }]]
-            }
+            // if (screen.width <= 1200 && screen.width > 675 ){
+            //     this.stories = [[{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     }],
+            //     [{
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'two'
+            //     }],
+            //     [{
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'two'
+            //     }],
+            //     [{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     }],
+            //     [{
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'two'
+            //     }],
+            //     [{
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'two'
+            //     }]]
+            //     this.loadedMax = 6
+            // }
+            // else {
+            //     this.stories = [[{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'three'
+            //     }],
+            //     [{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'three'
+            //     }],
+            //     [{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'three'
+            //     }],
+            //     [{
+            //         src: '/static/images/prolly-suit-square.jpg',
+            //         title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+            //         storyNum: 'one'
+            //     },
+            //     {
+            //         src: '/static/images/csgo-thumbnail-1.png',
+            //         title: '100 Thieves acquires CS:GO team!',
+            //         storyNum: 'two'
+            //     },
+            //     {
+            //         src: '/static/images/aphromoo-square.png',
+            //         title: 'Welcome Aphromoo to the 100 Thieves Family!',
+            //         storyNum: 'three'
+            //     }]]
+            // }
         }  
     }
 }
 </script>
 
 <style>
+.sub-news {
+    width: 100%;
+    max-width: 88.3em;
+}
 .news-button {
     display: flex;
     justify-content: center;
@@ -201,5 +264,10 @@ export default {
 }
 .slide-up-enter-active {
     transition: all .7s linear;
+}
+@media (max-width: 860px) {
+    .sub-news-row-container {
+        max-height: none;
+    }
 }
 </style>
