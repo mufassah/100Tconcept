@@ -2,7 +2,7 @@
     <div class="sub-news-row">
     <div class="sub-news-body fade-in" v-for="story in stories" :key="story" :class="story.storyNum" 
             :style="{backgroundImage: 'url(' + story.src + ')'}">
-        <h1 class="sub-news-header">{{ story.title }}</h1>
+        <p class="sub-news-header">{{ story.title }}</p>
         <!-- <img :src="story.src"> -->
     </div>
     </div>
@@ -29,7 +29,7 @@ export default {
     height: 0; 
     width:30%;
     padding-bottom:30%; 
-    margin: 0 .3em 1em .3em;
+    margin: .5em;
     flex: 1;
     background-size: cover;
     position: relative;
@@ -40,6 +40,8 @@ export default {
     bottom: 0;
     left: 0;
     padding: 0 .2em .6em .2em;
+    width: 100%;
+    font-size: 1.4em;
 }
 .fade-in {
   opacity:0;  /* make things invisible upon start */
@@ -68,9 +70,9 @@ animation-delay: .8s;
         justify-content: space-around;
     }
 }
-@media (max-width: 860px) {
+@media (max-width: 750px) {
     .sub-news-header {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 }
 @media (max-width: 675px) {
@@ -87,9 +89,9 @@ animation-delay: .8s;
         font-size: 2em;
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 500px) {
     .sub-news-header {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 }
 </style>

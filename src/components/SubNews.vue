@@ -25,7 +25,7 @@ export default {
             loadedMax: 4,
             stories: [[{
                     src: '/static/images/dec-update-100t2.png',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    title: '100 Thieves Monthly Recap',
                     storyNum: 'one'
                 },
                 {
@@ -35,12 +35,12 @@ export default {
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    title: '100 Thieves signs Aphromoo!',
                     storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/dec-update-100t2.png',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    title: '100 Thieves Monthly Recap',
                     storyNum: 'one'
                 },
                 {
@@ -50,12 +50,12 @@ export default {
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    title: '100 Thieves signs Aphromoo!',
                     storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/dec-update-100t2.png',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    title: '100 Thieves Monthly Recap',
                     storyNum: 'one'
                 },
                 {
@@ -65,12 +65,12 @@ export default {
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    title: '100 Thieves signs Aphromoo!',
                     storyNum: 'three'
                 }],
                 [{
                     src: '/static/images/dec-update-100t2.png',
-                    title: 'Meet Pr0lly, The NA LCS Coach For 100 Thieves.',
+                    title: '100 Thieves Monthly Recap',
                     storyNum: 'one'
                 },
                 {
@@ -80,7 +80,7 @@ export default {
                 },
                 {
                     src: '/static/images/aphromoo-square.png',
-                    title: 'Welcome Aphromoo to the 100 Thieves Family!',
+                    title: '100 Thieves signs Aphromoo!',
                     storyNum: 'three'
                 }]]
 		}
@@ -259,7 +259,9 @@ export default {
     width: 100%;
 }*/
 .sub-news-row-container {
-    
+    display: flex;
+      justify-content: space-between;
+     max-height: 30em;
 }
 
 .slide-up-enter {
