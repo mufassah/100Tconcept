@@ -16,6 +16,13 @@ export default {
 </script>
 
 <style>
+/* .sub-news-row {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 400px;
+    margin-bottom: 2em;
+} */
 .sub-news-row {
     display: flex;
     justify-content: space-between;
