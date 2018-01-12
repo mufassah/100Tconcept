@@ -250,14 +250,17 @@ export default {
   text-decoration:  none;
 } 
 /*.sub-news {
-    display: flex;
-    flex-direction: column;
-}
-.sub-news-row-container {
-    display: flex;
-    justify-content: space-between;
-    max-height: 30em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 400px;
+    margin-bottom: 2em;
+    height: 100%;
+    width: 100%;
 }*/
+.sub-news-row-container {
+    
+}
 
 .slide-up-enter {
     max-height: 0em;
