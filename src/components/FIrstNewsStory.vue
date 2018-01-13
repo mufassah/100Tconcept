@@ -37,7 +37,7 @@ export default {
 	height: 25em;
 	width: 100%;
 	background-size: cover;
-	box-shadow: 0 2px 6px 2px rgba(0,0,0,.2), 0 1px 4px 2px rgba(0,0,0,.14), 0 2px 1px 2px rgba(0,0,0,.12);
+	box-shadow: 0 5px 10px 1px rgba(0,0,0,0.25), 0 3px 14px 2px rgba(0,0,0,0.24), 0 5px 5px -3px rgba(0,0,0,0.3);
 }
 .first-story-body {
 	flex: 3;

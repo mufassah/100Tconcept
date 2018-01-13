@@ -18,6 +18,7 @@ export default {
 .carousel {
 	height: 30em !important;
 	color: #E8E7E7;
+	box-shadow: 0 5px 10px 1px rgba(0,0,0,0.25), 0 3px 14px 2px rgba(0,0,0,0.24), 0 5px 5px -3px rgba(0,0,0,0.3);
 }
 .carousel__item {
 	background-size: contain !important;
