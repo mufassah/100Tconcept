@@ -40,24 +40,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-/*.app-body {
-  width: 100%;
-  max-width: 88.3em;
-  margin: auto;
-}
-
-@media (max-width: 1300px) {
-  .app-body {
-    padding: 0 5em;
-  }
-  
-}
-@media (max-width: 450px) {
-  .app-body {
-    padding: 0 1em;
-  }
-}*/
-</style>

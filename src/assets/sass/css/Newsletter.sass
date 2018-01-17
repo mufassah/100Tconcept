@@ -1,3 +1,5 @@
+@import 'colors'
+
 .form-container
   display: flex
   justify-content: space-between
@@ -42,22 +44,22 @@ input
   display: block
   background: none
   border: none
-  border-bottom: 1px solid #C71C26 !important
+  border-bottom: 1px solid $newsletterRed !important
   width: 100%
   font-weight: normal
   font-size: 16px
   z-index: 2
-  caret-color: #e0e0e0
+  caret-color: $homeWhite
   &:focus
     outline: none
     ~ label
       top: -10px
       font-size: .9em
-      color: #C71C26
+      color: $newsletterRed
   &:valid ~ label
     top: -10px
     font-size: .9em
-    color: #C71C26
+    color: $newsletterRed
 
 @media (max-width: 850px)
   .newsletter-card

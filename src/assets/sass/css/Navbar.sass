@@ -1,5 +1,7 @@
+@import 'colors'
+
 .side-nav-full > span
-  color: #E8E7E7
+  color: $homeWhite + 50
 
 .nav-container
   width: 100%
@@ -10,7 +12,7 @@
   height: 7em
 
 .nav-items a
-  color: #e0e0e0
+  color: $homeWhite
   text-decoration: none
   margin: 0px 10px
   padding: 10px 10px
@@ -23,7 +25,7 @@
   height: 7em
   padding-top: .2em
   padding-bottom: .2em
-  color: #e0e0e0
+  color: $homeWhite
   margin-bottom: 3em
   // position: sticky;
   // top: 0;
@@ -69,11 +71,11 @@ a.nav-logo
   margin-right: 1em
 
 a.nav-link
-  color: #E8E7E7
+  color: $nav-linkWhite
   &:link, &:visited
     // Applies to all visited links
     text-decoration: none
-    color: #E8E7E7
+    color: $nav-linkWhite
   &:hover
     text-decoration: none
     //  color: #E42832;
@@ -96,7 +98,7 @@ a.nav-link
     text-decoration: none
     font-size: 1.5em
     display: block
-    color: #E8E7E7
+    color: $nav-linkWhite
   .closebtn
     display: flex
     justify-content: flex-end

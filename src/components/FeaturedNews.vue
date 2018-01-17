@@ -39,22 +39,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-/*.featured-news {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin-right: 1em;
-}
-@media (min-width: 1300px) {
-	.non-desktop-view {
-		display: none;
-	}
-}
-@media (max-width: 1300px) {
-	.featured-news {
-		margin-right: 0;
-	}
-}*/
-</style>

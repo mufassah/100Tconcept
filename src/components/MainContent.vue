@@ -16,16 +16,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-	/*.main-content {
-		display: flex;
-		margin-top: 1em;
-	}
-
-	@media (max-width: 1300px) {
-		.main-content {
-			flex-direction: column;
-		}
-	}*/
-</style>

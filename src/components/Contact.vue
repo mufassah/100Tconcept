@@ -22,12 +22,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-/*.temp {
-    width: 100%;
-    max-width: 88.3em;
-    margin: auto;
-}
-*/
-</style>

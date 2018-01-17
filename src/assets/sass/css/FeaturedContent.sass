@@ -1,3 +1,5 @@
+@import 'colors'
+
 .featured-content
   flex: 1
   border-radius: 50px
@@ -19,7 +21,7 @@
 .featured-header
   border-left: 4px solid
   padding-left: .5em
-  border-color: #C71C26
+  border-color: $featuredRedBorder
   margin-bottom: 1em
   display: flex
   justify-content: flex-start
@@ -31,7 +33,7 @@
   text-align: center
   border-radius: 3px
   line-height: 2.5em
-  color: #e0e0e0
+  color: $homeWhite
   cursor: pointer
   animation: pulse 3s ease-in-out infinite
   &:link, &:visited
