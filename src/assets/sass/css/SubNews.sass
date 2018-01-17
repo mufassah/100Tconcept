@@ -1,0 +1,47 @@
+.sub-news
+  width: 100%
+  max-width: 88.3em
+
+.news-button
+  display: flex
+  justify-content: center
+  margin-bottom: 1em
+
+.news-btn
+  height: 2.5em
+  background: #a1131b
+  width: 8em
+  text-align: center
+  font-weight: bold
+  font-size: 1.1em
+  border-radius: 3px
+  line-height: 2.5em
+  color: #e0e0e0
+  cursor: pointer
+  &:hover, &:link, &:visited
+    text-decoration: none
+
+// .sub-news
+//     display: grid
+//     grid-gap: 2em
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+//     grid-auto-rows: 400px
+//     margin-bottom: 2em
+//     height: 100%
+//     width: 100%
+//
+
+.sub-news-row-container
+  display: flex
+  justify-content: space-between
+  max-height: 30em
+
+.slide-up-enter
+  max-height: 0em
+
+.slide-up-enter-active
+  transition: all .7s linear
+
+@media (max-width: 860px)
+  .sub-news-row-container
+    max-height: none

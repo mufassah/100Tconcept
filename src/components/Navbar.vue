@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style>
-.side-nav-full > span {
+/*.side-nav-full > span {
   color: #E8E7E7;
 }
 .nav-container {
@@ -91,7 +91,7 @@ export default {
   margin-bottom: 3em;
   /* position: sticky;
   top: 0;
-  z-index: 999; */
+  z-index: 999;
 }
 
 .nav-logo > img {
@@ -101,14 +101,14 @@ a.nav-logo{
   height: 6em;
 }
 a.nav-logo:link {
-  /* Applies to all visited links */
+  /* Applies to all visited links
   text-decoration:  none;
-  /*  color: #e0e0e0;*/
+  /*  color: #e0e0e0;
 } 
 a.nav-logo:visited {
-  /* Applies to all visited links */
+  /* Applies to all visited links 
   text-decoration:  none;
-  /*  color: white;*/
+  /*  color: white;
 } 
 a.nav-logo:hover{
   text-decoration: none;
@@ -144,18 +144,18 @@ a.nav-link{
   color:  #E8E7E7;
 }
 a.nav-link:link {
-  /* Applies to all visited links */
+  /* Applies to all visited links
   text-decoration:  none;
   color:  #E8E7E7;
 } 
 a.nav-link:visited {
-  /* Applies to all visited links */
+  /* Applies to all visited links
   text-decoration:  none;
   color:  #E8E7E7;
 } 
 a.nav-link:hover{
   text-decoration: none;
-  /*  color: #E42832;*/
+  /*  color: #E42832;
 }
 a.nav-link:active{
   text-decoration: none;
@@ -263,6 +263,6 @@ a.nav-link:active{
     align-items: flex-start;
     padding: .5em;
   }
-}
+}*/
 
 </style>

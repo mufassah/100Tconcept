@@ -61,7 +61,7 @@
 </script>
 
 <style>
-
+/*
 .footer-links {
   color: #e0e0e0;
   text-decoration: none;
@@ -133,7 +133,7 @@ footer {
 .sm-icon {
   position: relative;
   top: 5px;
-  /* width: 50px; */
+  /* width: 50px;
   color: #e0e0e0;
   transition: color .4s;
   transform: scale(2);
@@ -158,5 +158,5 @@ footer {
   .sm-links {
     padding: 0em 0em 1.5em 0em;
   }
-}
+}*/
 </style>

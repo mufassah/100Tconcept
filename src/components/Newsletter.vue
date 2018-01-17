@@ -29,7 +29,7 @@ export default {
 }
 </script>
 <style>
-.form-container {
+/*.form-container {
     display: flex;
     justify-content: space-between;
 }
@@ -43,7 +43,7 @@ export default {
     /* 
     border: 3px solid #a1131b;
     border-radius: 50px;
-    */
+    
 }
 .newsletter {
     position: relative;
@@ -100,5 +100,5 @@ input:focus ~ label, input:valid ~ label {
     .newsletter-card {
         min-height: 20em;
     }
-}
+}*/
 </style>

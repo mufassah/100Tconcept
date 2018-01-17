@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.news-home {
+/*.news-home {
     width: 100%;
     max-width: 88.3em;
     margin: auto;
@@ -43,5 +43,5 @@ export default {
   .news-home {
     padding: 0 1em;
   }
-}
+}*/
 </style>

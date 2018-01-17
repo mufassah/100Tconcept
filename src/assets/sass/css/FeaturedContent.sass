@@ -1,0 +1,59 @@
+.featured-content
+  flex: 1
+  border-radius: 50px
+
+.content-card
+  background-color: #1d1d1d
+  padding: 2em
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25), 0 3px 14px 2px rgba(0, 0, 0, 0.24), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+  margin-bottom: 1em
+  min-height: 33em
+  max-height: 33em
+  display: flex
+  flex-direction: column
+  align-items: center
+  iframe
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25), 0 3px 14px 2px rgba(0, 0, 0, 0.24), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+    height: 24.5em
+
+.featured-header
+  border-left: 4px solid
+  padding-left: .5em
+  border-color: #C71C26
+  margin-bottom: 1em
+  display: flex
+  justify-content: flex-start
+  width: 100%
+
+.pulse-animation
+  height: 2.5em
+  width: 8em
+  text-align: center
+  border-radius: 3px
+  line-height: 2.5em
+  color: #e0e0e0
+  cursor: pointer
+  animation: pulse 3s ease-in-out infinite
+  &:link, &:visited
+    text-decoration: none
+
+@keyframes pulse
+  0%, 70%
+    box-shadow: 0px 0px 0px 0px rgba(220, 220, 220, 0.5)
+
+  100%
+    box-shadow: 0 0px 0px 7px rgba(250, 115, 115, 0)
+
+
+@media (max-width: 1300px)
+  .desktop-view
+    display: none
+
+@media (max-width: 850px)
+  .content-card
+    width: 100%
+    min-height: 10em
+    iframe
+      height: auto
+  .news-card
+    display: none

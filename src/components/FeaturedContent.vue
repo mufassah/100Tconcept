@@ -53,7 +53,7 @@ export default {
 
 <style>
 
-.featured-content {
+/*.featured-content {
     flex: 1;
     border-radius: 50px;
 }	
@@ -123,6 +123,6 @@ export default {
     .news-card {
 		display: none;
 	}
-}
+}*/
 
 </style>

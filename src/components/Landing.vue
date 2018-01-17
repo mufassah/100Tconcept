@@ -43,7 +43,7 @@ export default {
 
 <style>
 
-.app-body {
+/*.app-body {
   width: 100%;
   max-width: 88.3em;
   margin: auto;
@@ -59,5 +59,5 @@ export default {
   .app-body {
     padding: 0 1em;
   }
-}
+}*/
 </style>

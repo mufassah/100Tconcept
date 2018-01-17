@@ -27,7 +27,7 @@ export default {
 
 <style>
 
-.story-avatar {
+/*.story-avatar {
  -webkit-box-flex: 1;
  -ms-flex: 1;
  flex: 2;
@@ -62,10 +62,10 @@ export default {
   cursor: pointer;
     /*-webkit-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
-    Wanted to see what the purpose of this thing was, couldn't figure it out. Didn't put much time into it */
+    Wanted to see what the purpose of this thing was, couldn't figure it out. Didn't put much time into it
   }
   .story-button:hover{
-   /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
+   /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); 
    text-decoration: none;
  }
 
@@ -93,10 +93,10 @@ export default {
 	background-color: #1d1d1d;
 	padding: .25em;
 	margin-bottom: 1em;
-	/* border-left: 4px solid; */
+	/* border-left: 4px solid;
   padding-left: .5em;
   height: 18em;
-  /* border-color: #a1131b; */
+  /* border-color: #a1131b;
   box-shadow: 0 5px 10px 1px rgba(0,0,0,0.25), 0 3px 14px 2px rgba(0,0,0,0.24), 0 5px 5px -3px rgba(0,0,0,0.3);
 }
 .story-button-small {
@@ -113,7 +113,7 @@ export default {
   cursor: pointer;
 }
 .story-button-small:hover{
- /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42); */
+ /* box-shadow: 0 -1px 1px 1px rgba(224,224,224,.5), 0 0px 2px 3px rgba(224,224,224,.44), 0 1px 5px 3px rgba(224,224,224,.42);
  text-decoration: none;
 }
 
@@ -136,5 +136,5 @@ export default {
 	.story-avatar img {
 		width: 15em !important;
 	}
-}
+}*/
 </style>

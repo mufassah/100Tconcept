@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style>
-.featured-merch {
+/*.featured-merch {
     height: 18em;
 }
 .merch-images {
@@ -55,5 +55,5 @@ export default {
     .featured-merch {
         height: 9em;
     }    
-}
+}*/
 </style>

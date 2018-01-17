@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-	.main-content {
+	/*.main-content {
 		display: flex;
 		margin-top: 1em;
 	}
@@ -27,5 +27,5 @@ export default {
 		.main-content {
 			flex-direction: column;
 		}
-	}
+	}*/
 </style>

@@ -218,7 +218,7 @@ export default {
 </script>
 
 <style>
-.sub-news {
+/*.sub-news {
     width: 100%;
     max-width: 88.3em;
 }
@@ -257,7 +257,7 @@ export default {
     margin-bottom: 2em;
     height: 100%;
     width: 100%;
-}*/
+}
 .sub-news-row-container {
     display: flex;
       justify-content: space-between;
@@ -274,5 +274,5 @@ export default {
     .sub-news-row-container {
         max-height: none;
     }
-}
+}*/
 </style>

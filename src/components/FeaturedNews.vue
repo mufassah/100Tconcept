@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style>
-.featured-news {
+/*.featured-news {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -56,5 +56,5 @@ export default {
 	.featured-news {
 		margin-right: 0;
 	}
-}
+}*/
 </style>

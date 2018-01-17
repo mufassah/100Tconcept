@@ -1,0 +1,39 @@
+.yt-content-card
+  background-color: #1d1d1d
+  padding: 2em
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25), 0 3px 14px 2px rgba(0, 0, 0, 0.24), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+  margin-bottom: 1em
+  min-height: 33em
+  max-height: 33em
+  display: flex
+  flex-direction: column
+  align-items: center
+  iframe
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25), 0 3px 14px 2px rgba(0, 0, 0, 0.24), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+    height: 24.5em
+
+.smaller-screen
+  display: none
+
+@media (min-width: 850px)
+  .smaller-screen, .medium-screen
+    display: none
+
+@media (max-width: 850px)
+  .yt-content-card
+    width: 100%
+    min-height: 10em
+    iframe
+      height: 20em
+  .medium-screen
+    display: inline-block
+  .smaller-screen, .large-screen
+    display: none
+
+@media (max-width: 650px)
+  .yt-content-card iframe
+    height: auto
+  .medium-screen
+    display: none
+  .smaller-screen
+    display: inline-block

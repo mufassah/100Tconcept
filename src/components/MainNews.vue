@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-.main-news {
+/*.main-news {
     width: 100%;
     max-width: 88.3em;
 }
@@ -44,6 +44,6 @@ export default {
 .main-news-content-card > p {
     padding: 1em 2em;
     font-size: 1.25em;
-}
+}*/
 
 </style>

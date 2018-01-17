@@ -32,7 +32,7 @@ export default {
 </script>
 
 <<style>
-.first-story {
+/*.first-story {
 	display: flex;
 	height: 25em;
 	width: 100%;
@@ -65,5 +65,5 @@ export default {
 	.first-story-body {
 		background-image: url('/static/images/inv-lcs-tall.jpg') !important;
 	}
-}
+}*/
 </style>
