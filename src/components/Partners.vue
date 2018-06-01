@@ -35,7 +35,6 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 3.5em 0;
-	width: 100%;
     max-width: 88.3em;
     margin: auto;
 	margin-bottom: 4em;
